@@ -1,0 +1,15 @@
+{
+  "products": [
+    { "id": 1, "name": "Torta de Chocolate", "category": "Tortas", "price": 45, "available": true },
+    { "id": 2, "name": "Pie de Limón", "category": "Postres", "price": 30, "available": true }
+  ],
+  "customers": [
+    { "id": 1, "name": "María López" },
+    { "id": 2, "name": "Carlos Gómez" }
+  ],
+  "orders": [
+    { "id": 1, "date": "2025-10-01", "total": 90 },
+    { "id": 2, "date": "2025-10-10", "total": 45 },
+    { "id": 3, "date": "2025-11-01", "total": 60 }
+  ]
+}

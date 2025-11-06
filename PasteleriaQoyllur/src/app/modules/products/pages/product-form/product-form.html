@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h3>Registrar Producto</h3>
+  <form [formGroup]="productForm" (ngSubmit)="save()">
+    <input class="form-control mb-2" formControlName="name" placeholder="Nombre">
+    <input class="form-control mb-2" formControlName="category" placeholder="Categoría">
+    <input class="form-control mb-2" formControlName="price" type="number" placeholder="Precio">
+    <select class="form-control mb-3" formControlName="available">
+      <option [ngValue]="true">Disponible</option>
+      <option [ngValue]="false">No disponible</option>
+    </select>
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </form>
+</div>

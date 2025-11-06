@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h3>Lista de Productos</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Disponible</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{ p.name }}</td>
+        <td>{{ p.category }}</td>
+        <td>S/ {{ p.price }}</td>
+        <td>{{ p.available ? 'Sí' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

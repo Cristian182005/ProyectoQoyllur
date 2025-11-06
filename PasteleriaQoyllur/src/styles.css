@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+/* 🎂 Paleta de colores QOYLLUR Pastelería */
+body {
+  background-color: #fff3e0; /* fondo crema */
+  font-family: 'Poppins', sans-serif;
+  color: #6d6875; /* gris pastel */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fb8500 !important; /* naranja pastel */
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  color: white !important;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-link {
+  color: white !important;
+  margin-right: 10px;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #ffb703; /* amarillo dorado */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e6a103; /* versión más oscura del amarillo */
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #fb8500; /* naranja pastel */
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Formularios */
+input,
+select,
+textarea {
+  border-radius: 8px !important;
+}
+
+/* Títulos */
+h2,
+h3,
+h4 {
+  color: #fb8500; /* naranja pastel */
+  font-weight: 600;
+}
+
+/* Tablas */
+.table {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #ffb703;
+  color: white;
+}
