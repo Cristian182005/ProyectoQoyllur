@@ -1,24 +1,25 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { CoreModule } from './core/core-module';
 
 @NgModule({
-  declarations: [
-    App
-  ],
+  declarations: [App],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    CoreModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [App]
 })
-export class AppModule { }
+export class AppModule {}

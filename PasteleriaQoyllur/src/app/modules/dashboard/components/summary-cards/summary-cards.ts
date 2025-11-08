@@ -7,7 +7,7 @@ import { OrderService } from '../../../orders/services/order-service';
   selector: 'app-summary-cards',
   standalone: false,
   templateUrl: './summary-cards.html',
-  styleUrl: './summary-cards.css',
+  styleUrls: ['./summary-cards.css'],
 })
 export class SummaryCards implements OnInit{
     totalProducts = 0;

@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Footer } from './footer/footer';
 import { Header } from './header/header';
-import { SharedModule } from '../shared/shared-module';
-import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +12,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    Header,
+    Footer
   ]
 })
 export class CoreModule { }

@@ -1,13 +1,58 @@
 <div class="container mt-4">
-  <h3>Registrar Producto</h3>
+  <h3 class="text-secondary mb-4">
+    {{ isEditMode ? 'Editar Producto ✏️' : 'Agregar Producto 🧁' }}
+  </h3>
+
   <form [formGroup]="productForm" (ngSubmit)="save()">
-    <input class="form-control mb-2" formControlName="name" placeholder="Nombre">
-    <input class="form-control mb-2" formControlName="category" placeholder="Categoría">
-    <input class="form-control mb-2" formControlName="price" type="number" placeholder="Precio">
-    <select class="form-control mb-3" formControlName="available">
-      <option [ngValue]="true">Disponible</option>
-      <option [ngValue]="false">No disponible</option>
-    </select>
-    <button class="btn btn-primary" type="submit">Guardar</button>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre</label>
+      <input
+        id="name"
+        type="text"
+        class="form-control"
+        formControlName="name"
+        placeholder="Ej: Torta de chocolate"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="category" class="form-label">Categoría</label>
+      <input
+        id="category"
+        type="text"
+        class="form-control"
+        formControlName="category"
+        placeholder="Ej: Pastel"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Precio (S/)</label>
+      <input
+        id="price"
+        type="number"
+        class="form-control"
+        formControlName="price"
+        placeholder="Ej: 45.00"
+      />
+    </div>
+
+    <div class="form-check mb-4">
+      <input
+        id="available"
+        type="checkbox"
+        class="form-check-input"
+        formControlName="available"
+      />
+      <label for="available" class="form-check-label">
+        Disponible
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-warning">
+      💾 {{ isEditMode ? 'Actualizar' : 'Guardar' }}
+    </button>
+    <a routerLink="/products" class="btn btn-secondary ms-2">↩ Volver</a>
   </form>
+  <br>
 </div>

@@ -1,15 +1,41 @@
 {
   "products": [
-    { "id": 1, "name": "Torta de Chocolate", "category": "Tortas", "price": 45, "available": true },
-    { "id": 2, "name": "Pie de Limón", "category": "Postres", "price": 30, "available": true }
+    {
+      "name": "Torta de chocolate",
+      "category": "Pastel",
+      "price": 8,
+      "available": true,
+      "id": 1
+    },
+    {
+      "name": "Arroz con leche",
+      "category": "Mazamorra",
+      "price": 2.5,
+      "available": true,
+      "id": 2
+    },
+    {
+      "name": "Mazamorra Morada",
+      "category": "Mazamorra",
+      "price": 3,
+      "available": true,
+      "id": 3
+    },
+    {
+      "name": "Keke de naranja",
+      "category": "Keke",
+      "price": 1.5,
+      "available": true,
+      "id": 4
+    },
+    {
+      "name": "Gelatina de Fresa",
+      "category": "Gelatina",
+      "price": 2,
+      "available": true,
+      "id": 5
+    }
   ],
-  "customers": [
-    { "id": 1, "name": "María López" },
-    { "id": 2, "name": "Carlos Gómez" }
-  ],
-  "orders": [
-    { "id": 1, "date": "2025-10-01", "total": 90 },
-    { "id": 2, "date": "2025-10-10", "total": 45 },
-    { "id": 3, "date": "2025-11-01", "total": 60 }
-  ]
+  "customers": [],
+  "orders": []
 }
