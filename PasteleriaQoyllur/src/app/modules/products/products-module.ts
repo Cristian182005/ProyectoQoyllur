@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ProductsRoutingModule } from './products-routing-module';
 import { ProductList } from './pages/product-list/product-list';
 import { ProductForm } from './pages/product-form/product-form';
-import { SharedModule } from '../../shared/shared-module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 

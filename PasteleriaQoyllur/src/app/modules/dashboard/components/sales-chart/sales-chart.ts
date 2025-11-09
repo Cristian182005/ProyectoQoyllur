@@ -6,7 +6,7 @@ import { Color, ScaleType } from '@swimlane/ngx-charts';
   selector: 'app-sales-chart',
   standalone: false,
   templateUrl: './sales-chart.html',
-  styleUrls: ['./sales-chart.css']
+  styles: ``
 })
 export class SalesChart implements OnInit {
 

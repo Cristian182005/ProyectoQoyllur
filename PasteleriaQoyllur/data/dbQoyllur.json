@@ -34,6 +34,13 @@
       "price": 2,
       "available": true,
       "id": 5
+    },
+    {
+      "name": "Tarta de cereza",
+      "category": "Pastel",
+      "price": 32,
+      "available": true,
+      "id": 6
     }
   ],
   "customers": [],
