@@ -5,11 +5,12 @@ import { CustomerForm } from './pages/customer-form/customer-form';
 
 const routes: Routes = [
   { path: '', component: CustomerList },
-  { path: 'new', component: CustomerForm }
+  { path: 'new', component: CustomerForm },
+  { path: 'edit/:id', component: CustomerForm },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CustomersRoutingModule { }
+export class CustomersRoutingModule {}

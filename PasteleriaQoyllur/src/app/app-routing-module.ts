@@ -5,34 +5,39 @@ import { Error404 } from './shared/components/error404/error404';
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: () => import('./modules/auth/auth-module').then(m => m.AuthModule),
+    loadChildren: () => import('./modules/auth/auth-module').then((m) => m.AuthModule),
   },
 
   {
     path: 'dashboard',
-    loadChildren: () => import('./modules/dashboard/dashboard-module').then(m => m.DashboardModule),
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard-module').then((m) => m.DashboardModule),
   },
 
   {
     path: 'products',
-    loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule),
+    loadChildren: () => import('./modules/products/products-module').then((m) => m.ProductsModule),
   },
 
   {
     path: 'customers',
-    loadChildren: () => import('./modules/customers/customers-module').then(m => m.CustomersModule)
+    loadChildren: () =>
+      import('./modules/customers/customers-module').then((m) => m.CustomersModule),
   },
 
-  { path: '',
-    redirectTo: 'login',
-    pathMatch: 'full' },
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./modules/orders/orders-module').then((m) => m.OrdersModule),
+  },
 
-  { path: '**',
-    component: Error404 },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+
+  { path: '**', component: Error404 },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

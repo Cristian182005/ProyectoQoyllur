@@ -1,14 +1,33 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Customer } from '../../../shared/models/customer';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CustomerService {
   private baseUrl = 'http://localhost:3002/customers';
+
   constructor(private http: HttpClient) {}
-  getAll(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl);
+
+  getAll(): Observable<Customer[]> {
+    return this.http.get<Customer[]>(this.baseUrl);
+  }
+
+  getById(id: number): Observable<Customer> {
+    return this.http.get<Customer>(`${this.baseUrl}/${id}`);
+  }
+
+  create(customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(this.baseUrl, customer);
+  }
+
+  update(customer: Customer): Observable<Customer> {
+    return this.http.put<Customer>(`${this.baseUrl}/${customer.id}`, customer);
+  }
+
+  delete(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 }

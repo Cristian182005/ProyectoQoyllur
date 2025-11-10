@@ -1,0 +1,58 @@
+<div class="container mt-4">
+  <h3 class="text-secondary mb-3">
+    {{ isEditMode ? 'Editar Pedido 📝' : 'Registrar Nuevo Pedido 🧾' }}
+  </h3>
+
+  <form [formGroup]="orderForm" (ngSubmit)="save()">
+    <div class="mb-3">
+      <label class="form-label">Cliente (ID)</label>
+      <input type="number" formControlName="customerId" class="form-control" placeholder="Ej: 1" />
+
+      <!-- ✅ Mostrar nombre si el cliente existe -->
+      <div *ngIf="customerName" class="alert alert-success mt-2 p-2">
+        Cliente: <strong>{{ customerName }}</strong>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Fecha</label>
+      <input type="date" formControlName="date" class="form-control" />
+    </div>
+
+    <h5 class="mt-4">Productos del pedido 🛍️</h5>
+
+    <div formArrayName="items">
+      <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="border p-3 mb-2 rounded">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-4">
+            <select formControlName="productId" class="form-select" (change)="calculateTotal()">
+              <option value="">Seleccionar producto</option>
+              <option *ngFor="let p of products" [value]="p.id">{{ p.name }}</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <input type="number" formControlName="quantity" class="form-control" placeholder="Cant." (input)="calculateTotal()" />
+          </div>
+          <div class="col-md-3">
+            <input type="number" class="form-control" placeholder="Precio" [readonly]="true" formControlName="price" />
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-danger btn-sm" (click)="removeItem(i)">❌</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-outline-primary btn-sm mt-2" (click)="addItem()">➕ Añadir producto</button>
+
+    <div class="mt-4">
+      <h5>Total: {{ orderForm.get('total')?.value | currency:'S/ ' }}</h5>
+    </div>
+
+    <div class="text-end mt-3">
+      <button class="btn btn-success" type="submit">💾 Guardar Pedido</button>
+      <a routerLink="/orders" class="btn btn-secondary ms-2">↩ Volver</a>
+    </div>
+  </form>
+  <br />
+</div>

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CustomersRoutingModule } from './customers-routing-module';
 import { CustomerList } from './pages/customer-list/customer-list';
 import { CustomerForm } from './pages/customer-form/customer-form';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CustomerForm } from './pages/customer-form/customer-form';
   ],
   imports: [
     CommonModule,
-    CustomersRoutingModule
+    CustomersRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CustomersModule { }

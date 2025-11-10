@@ -12,17 +12,13 @@ export class SalesChart implements OnInit {
 
   view: [number, number] = [700, 300];
 
-  chartData = [
-    { name: 'Enero', value: 1500 },
-    { name: 'Febrero', value: 2200 },
-    { name: 'Marzo', value: 1800 }
-  ];
+  chartData: { name: string; value: number }[] = []; // ← limpio
 
   colorScheme: Color = {
     name: 'customScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#ffb703', '#fb8500', '#b5838d', '#6d6875'] // 🎨 Colores QOYLLUR
+    domain: ['#ffb703', '#fb8500', '#b5838d', '#6d6875'] // 🎨 colores QOYLLUR
   };
 
   constructor(private orderService: OrderService) {}
@@ -30,9 +26,8 @@ export class SalesChart implements OnInit {
   ngOnInit(): void {
     this.orderService.getAll().subscribe({
       next: (orders) => {
-        if (!orders || orders.length === 0) return; // 👈 evita errores si no hay datos
+        if (!orders || orders.length === 0) return;
 
-        // Agrupar las ventas por mes (YYYY-MM)
         const summary: { [key: string]: number } = {};
 
         for (const o of orders) {
@@ -40,15 +35,12 @@ export class SalesChart implements OnInit {
           summary[month] = (summary[month] || 0) + o.total;
         }
 
-        // Convertir el resumen a formato para ngx-charts
         this.chartData = Object.entries(summary).map(([name, value]) => ({
           name,
           value
         }));
       },
-      error: (err) => {
-        console.error('Error al obtener pedidos:', err);
-      }
+      error: (err) => console.error('Error al obtener pedidos:', err)
     });
   }
 }

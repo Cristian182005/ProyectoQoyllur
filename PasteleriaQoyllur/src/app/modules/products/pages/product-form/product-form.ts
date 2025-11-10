@@ -41,13 +41,15 @@ export class ProductForm implements OnInit {
   }
 
   loadProduct(id: string): void {
-    this.service.getAll().subscribe(products => {
-      const product = products.find(p => p.id === id);
-      if (product) {
-        this.productForm.patchValue(product);
-      }
-    });
-  }
+  const idNumber = Number(id); // 🔹 conversión explícita
+  this.service.getAll().subscribe(products => {
+    const product = products.find(p => p.id === idNumber);
+    if (product) {
+      this.productForm.patchValue(product);
+    }
+  });
+}
+
 
   save(): void {
     if (this.productForm.invalid) {
@@ -66,7 +68,7 @@ export class ProductForm implements OnInit {
     } as Product;
 
     const request = this.isEditMode
-      ? this.service.update({ ...productData, id: this.productId! }) // ✅ si es edición, se envía el id
+      ? this.service.update({ ...productData, id: Number(this.productId) }) // ✅ si es edición, se envía el id
       : this.service.create(productData); // ✅ si es nuevo, se omite el id
 
     request.subscribe(() => {

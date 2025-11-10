@@ -41,8 +41,164 @@
       "price": 32,
       "available": true,
       "id": 6
+    },
+    {
+      "name": "Keke de Choco Chips",
+      "category": "Keke",
+      "price": 3,
+      "available": true,
+      "id": 7
+    },
+    {
+      "name": "Torta de Vainilla",
+      "category": "Pastel",
+      "price": 5.5,
+      "available": true,
+      "id": 8
+    },
+    {
+      "name": "Brownies",
+      "category": "Keke",
+      "price": 3.5,
+      "available": true,
+      "id": 9
     }
   ],
-  "customers": [],
-  "orders": []
+  "customers": [
+    {
+      "name": "Cristian De La Cruz",
+      "email": "jhon@gmail.com",
+      "phone": "951123489",
+      "id": 1
+    },
+    {
+      "name": "Cesar Carhuacusma",
+      "email": "cesar@gmail.com",
+      "phone": "123456789",
+      "id": 2
+    },
+    {
+      "name": "Yeremy Jurgens",
+      "email": "jurgens@gmail.com",
+      "phone": "789456123",
+      "id": 3
+    }
+  ],
+  "orders": [
+    {
+      "customerId": 1,
+      "date": "2025-11-13",
+      "total": 26,
+      "items": [
+        {
+          "productId": "6",
+          "quantity": 1,
+          "price": 3
+        },
+        {
+          "productId": "1",
+          "quantity": 5,
+          "price": 3
+        },
+        {
+          "productId": "6",
+          "quantity": 2,
+          "price": 4
+        }
+      ],
+      "id": 1
+    },
+    {
+      "customerId": 1,
+      "date": "2024-06-11",
+      "total": 204,
+      "items": [
+        {
+          "productId": "6",
+          "quantity": 6,
+          "price": 32
+        },
+        {
+          "productId": "7",
+          "quantity": 4,
+          "price": 3
+        }
+      ],
+      "id": 2
+    },
+    {
+      "customerId": 2,
+      "date": "2023-05-18",
+      "total": 25.5,
+      "items": [
+        {
+          "productId": "7",
+          "quantity": 3,
+          "price": 3
+        },
+        {
+          "productId": "8",
+          "quantity": 3,
+          "price": 5.5
+        }
+      ],
+      "id": 3
+    },
+    {
+      "customerId": 3,
+      "date": "2022-06-17",
+      "total": 348.5,
+      "items": [
+        {
+          "productId": "3",
+          "quantity": 5,
+          "price": 3
+        },
+        {
+          "productId": "9",
+          "quantity": 3,
+          "price": 3.5
+        },
+        {
+          "productId": "4",
+          "quantity": 2,
+          "price": 1.5
+        },
+        {
+          "productId": "6",
+          "quantity": 10,
+          "price": 32
+        }
+      ],
+      "id": 4
+    },
+    {
+      "customerId": 1,
+      "date": "2021-08-18",
+      "total": 335.5,
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 4,
+          "price": 8
+        },
+        {
+          "productId": "6",
+          "quantity": 8,
+          "price": 32
+        },
+        {
+          "productId": "9",
+          "quantity": 5,
+          "price": 3.5
+        },
+        {
+          "productId": "3",
+          "quantity": 10,
+          "price": 3
+        }
+      ],
+      "id": 5
+    }
+  ]
 }

@@ -29,7 +29,7 @@ export class ProductList implements OnInit {
     this.router.navigate(['/products/edit', product.id]);
   }
 
-  deleteProduct(id: string): void {
+  deleteProduct(id: number): void {
     if (confirm('¿Seguro que deseas eliminar este producto?')) {
       this.productService.delete(id).subscribe(() => {
         alert('Producto eliminado correctamente 🗑️');

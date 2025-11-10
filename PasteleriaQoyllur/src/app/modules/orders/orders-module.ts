@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { OrdersRoutingModule } from './orders-routing-module';
 import { OrderList } from './pages/order-list/order-list';
+import { OrderForm } from './pages/order-form/order-form';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    OrderList
+    OrderList,
+    OrderForm
   ],
   imports: [
     CommonModule,
-    OrdersRoutingModule
+    OrdersRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class OrdersModule { }

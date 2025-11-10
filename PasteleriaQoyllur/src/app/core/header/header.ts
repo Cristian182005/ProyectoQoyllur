@@ -9,10 +9,14 @@ import { Router } from '@angular/router';
   styles: ``,
 })
 export class Header {
-    constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router) {}
 
+  goHome(): void {
+    this.router.navigate(['/dashboard']);
+  }
   logout() {
     this.auth.logout();
+    alert('Sesión cerrada correctamente 👋');
     this.router.navigate(['/login']);
   }
 }
