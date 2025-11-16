@@ -17,6 +17,6 @@ export class Header {
   logout() {
     this.auth.logout();
     alert('Sesión cerrada correctamente 👋');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth']);
   }
 }

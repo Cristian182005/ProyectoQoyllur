@@ -4,18 +4,21 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core-module';
 
 @NgModule({
-  declarations: [App],
+  declarations: [
+    App
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     NgxChartsModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi())

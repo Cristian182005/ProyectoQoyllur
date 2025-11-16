@@ -1,0 +1,43 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow-lg" style="width: 360px;">
+
+    <div class="text-center mb-3">
+      <img src="assets/img/logoRegisterQoyllur.png" alt="Qoyllur" width="200" class="mb-2" />
+      <h4 class="text-warning">Registrar Administrador</h4>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <!-- Usuario -->
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Usuario"
+          formControlName="username"
+        >
+      </div>
+
+      <!-- Contraseña -->
+      <div class="mb-3">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Contraseña"
+          formControlName="password"
+        >
+      </div>
+
+      <!-- Botón Registrar -->
+      <button class="btn btn-primary w-100" type="submit">
+        Registrar
+      </button>
+    </form>
+
+    <!-- Botón Volver -->
+    <div class="text-center mt-3">
+      <a routerLink="/auth" class="btn btn-outline-secondary w-100">
+        Volver al Login
+      </a>
+    </div>
+
+  </div>
+</div>

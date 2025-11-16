@@ -1,17 +1,51 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
-  <div class="card p-4 shadow-lg" style="width: 360px; background-color: #fff;">
+  <div class="card p-4 shadow-lg" style="width: 360px; background-color: #fff">
     <div class="text-center mb-3">
-      <img src="assets/img/logoQoyllur.png" alt="Qoyllur" width="200" class="mb-2">
+      <img src="assets/img/logoQoyllur.png" alt="Qoyllur" width="200" class="mb-2" />
       <h4 class="text-warning">QOYLLUR Pastelería</h4>
     </div>
+
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <!-- Usuario -->
       <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Usuario" formControlName="username">
+        <input type="text" class="form-control" placeholder="Usuario" formControlName="username" />
+        <small class="text-danger" *ngIf="username?.touched && username?.invalid">
+          <span *ngIf="username?.errors?.['required']">El usuario es obligatorio.</span>
+          <span *ngIf="username?.errors?.['minlength']">Mínimo 4 caracteres.</span>
+        </small>
       </div>
+
+      <!-- Contraseña -->
       <div class="mb-3">
-        <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Contraseña"
+          formControlName="password"
+        />
+        <small class="text-danger" *ngIf="password?.touched && password?.invalid">
+          <span *ngIf="password?.errors?.['required']">La contraseña es obligatoria.</span>
+          <span *ngIf="password?.errors?.['minlength']">Mínimo 4 caracteres.</span>
+        </small>
       </div>
-      <button class="btn btn-warning w-100" type="submit">Ingresar</button>
+
+      <!-- Botón Login -->
+      <button
+        class="btn btn-warning w-100"
+        type="submit"
+        [disabled]="loginForm.invalid || isSubmitting"
+      >
+        {{ isSubmitting ? 'Ingresando...' : 'Ingresar' }}
+      </button>
     </form>
+
+    <!-- 🔥 BOTÓN DE REGISTRO (nuevo) -->
+    <div class="text-center mt-3">
+      <small class="text-secondary">¿No tienes una cuenta de administrador?</small>
+      <br />
+      <a routerLink="/auth/register" class="btn btn-sm btn-outline-primary mt-2 w-100">
+        Registrar nuevo administrador
+      </a>
+    </div>
   </div>
 </div>

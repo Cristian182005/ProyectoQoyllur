@@ -1,34 +1,43 @@
+// src/app/modules/auth/services/auth-service.ts
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map, Observable } from 'rxjs';
+import { Users } from '../../../shared/models/users';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private loggedIn = false;
-  private userName = '';
+  private apiUrl = 'http://localhost:3002/users';
+  private storageKey = 'user';
 
-  login(username: string, password: string): boolean {
-    // Simulación de login: usuario "admin", clave "1234"
-    if (username === 'admin' && password === '1234') {
-      this.loggedIn = true;
-      this.userName = username;
-      localStorage.setItem('user', username);
-      return true;
-    }
-    return false;
+  constructor(private http: HttpClient) {}
+
+  login(username: string, password: string): Observable<boolean> {
+    return this.http
+      .get<Users[]>(`${this.apiUrl}?username=${username}&password=${password}`)
+      .pipe(
+        map((users: Users[]) => {
+          if (users.length > 0 && users[0]) {
+            // Guarda al usuario completo (incluyendo id autogenerado)
+            localStorage.setItem(this.storageKey, JSON.stringify(users[0]));
+            return true;
+          }
+          return false;
+        })
+      );
   }
 
   logout(): void {
-    this.loggedIn = false;
-    this.userName = '';
-    localStorage.removeItem('user');
+    localStorage.removeItem(this.storageKey);
   }
 
   isAuthenticated(): boolean {
-    return this.loggedIn || !!localStorage.getItem('user');
+    return !!localStorage.getItem(this.storageKey);
   }
 
-  getUser(): string {
-    return this.userName || localStorage.getItem('user') || '';
+  getUser(): Users | null {
+    const data = localStorage.getItem(this.storageKey);
+    return data ? JSON.parse(data) : null;
   }
 }

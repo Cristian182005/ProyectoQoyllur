@@ -22,7 +22,7 @@
       <tr *ngFor="let p of products">
         <td>{{ p.id }}</td>
         <td>{{ p.name }}</td>
-        <td>{{ p.category }}</td>
+        <td>{{ getCategoryName(p.categoryId) }}</td>
         <td>{{ p.price | currency:'S/ ':'symbol':'1.2-2' }}</td>
         <td>
           <span

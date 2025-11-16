@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../products/services/product-service';
 import { CustomerService } from '../../../customers/services/customer-service';
 import { OrderService } from '../../../orders/services/order-service';
+import { CategoryService } from '../../../categories/services/category-service';
 
 @Component({
   selector: 'app-summary-cards',
@@ -9,20 +10,25 @@ import { OrderService } from '../../../orders/services/order-service';
   templateUrl: './summary-cards.html',
   styleUrls: ['./summary-cards.css'],
 })
-export class SummaryCards implements OnInit{
-    totalProducts = 0;
+export class SummaryCards implements OnInit {
+
+  totalProducts = 0;
+  totalCategories = 0;
   totalCustomers = 0;
   totalOrders = 0;
 
   constructor(
     private productService: ProductService,
     private customerService: CustomerService,
-    private orderService: OrderService
+    private orderService: OrderService,
+    private categoryService: CategoryService   // ✔ importado
   ) {}
 
   ngOnInit(): void {
     this.productService.getAll().subscribe(data => this.totalProducts = data.length);
+    this.categoryService.getAll().subscribe(data => this.totalCategories = data.length);
     this.customerService.getAll().subscribe(data => this.totalCustomers = data.length);
     this.orderService.getAll().subscribe(data => this.totalOrders = data.length);
+
   }
 }

@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h3 class="text-secondary mb-4">
+    {{ isEditMode ? 'Editar Categoría ✏️' : 'Nueva Categoría 📂' }}
+  </h3>
+
+  <form [formGroup]="categoryForm" (ngSubmit)="save()">
+
+    <div class="mb-3">
+      <label class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ej: Tortas"
+        formControlName="name"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-warning">
+      💾 {{ isEditMode ? 'Actualizar' : 'Guardar' }}
+    </button>
+
+    <a routerLink="/categories" class="btn btn-secondary ms-2">↩ Volver</a>
+  </form>
+  <br>
+</div>

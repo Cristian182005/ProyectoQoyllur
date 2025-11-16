@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "username": "admin",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "username": "cristian",
+      "password": "1234",
+      "id": 2
+    }
+  ],
   "products": [
     {
       "name": "Torta de chocolate",
@@ -83,6 +95,19 @@
       "price": 5,
       "available": false,
       "id": 13
+    },
+    {
+      "name": "Torta de Fresa",
+      "categoryId": 1,
+      "price": 5,
+      "available": true,
+      "id": 14
+    }
+  ],
+  "categories": [
+    {
+      "name": "Tortas",
+      "id": 1
     }
   ],
   "customers": [
