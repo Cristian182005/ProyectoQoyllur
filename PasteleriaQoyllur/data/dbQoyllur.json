@@ -9,6 +9,11 @@
       "username": "cristian",
       "password": "1234",
       "id": 2
+    },
+    {
+      "username": "cielito",
+      "password": "280101",
+      "id": 3
     }
   ],
   "products": [
@@ -116,6 +121,20 @@
       "categoryId": 15,
       "price": 10,
       "available": true
+    },
+    {
+      "name": "Torta de Chirimoya",
+      "categoryId": 1,
+      "price": 150,
+      "available": true,
+      "id": 16
+    },
+    {
+      "name": "Pan integral",
+      "categoryId": 16,
+      "price": 1.5,
+      "available": true,
+      "id": 17
     }
   ],
   "categories": [
@@ -178,6 +197,10 @@
     {
       "id": 15,
       "name": "Decoraciones"
+    },
+    {
+      "name": "Integral",
+      "id": 16
     }
   ],
   "customers": [
@@ -204,6 +227,12 @@
       "email": "dalia@gmail.com",
       "phone": "456789123",
       "id": 4
+    },
+    {
+      "name": "Cielo Campos",
+      "email": "cielito28@gmail.com",
+      "phone": "940784299",
+      "id": 5
     }
   ],
   "orders": [
@@ -219,6 +248,34 @@
         }
       ],
       "id": 1
+    },
+    {
+      "customerId": 5,
+      "date": "2025-11-28",
+      "total": 662,
+      "items": [
+        {
+          "productId": "16",
+          "quantity": 4,
+          "price": 150
+        },
+        {
+          "productId": "14",
+          "quantity": 2,
+          "price": 7
+        },
+        {
+          "productId": "7",
+          "quantity": 3,
+          "price": 8
+        },
+        {
+          "productId": "13",
+          "quantity": 6,
+          "price": 4
+        }
+      ],
+      "id": 2
     }
   ],
   "suppliers": [
