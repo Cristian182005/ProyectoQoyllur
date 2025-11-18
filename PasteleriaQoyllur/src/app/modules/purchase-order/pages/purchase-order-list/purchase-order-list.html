@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h3 class="text-secondary mb-3">📄 Órdenes de Compra</h3>
+
+  <div class="text-end mb-3">
+    <a routerLink="/purchase-order/new" class="btn btn-success">➕ Nueva Orden</a>
+  </div>
+
+  <table class="table table-bordered shadow-sm">
+    <thead class="table-success">
+      <tr>
+        <th>ID</th>
+        <th>Proveedor</th>
+        <th>Fecha</th>
+        <th>Total (S/)</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let o of orders">
+        <td>{{ o.id }}</td>
+        <td>{{ getSupplierName(o.supplierId) }}</td>
+        <td>{{ o.date }}</td>
+        <td>{{ o.total | currency:'S/ ' }}</td>
+        <td class="text-center">
+          <a [routerLink]="['/purchase-order/edit', o.id]" class="btn btn-info btn-sm me-2">✏️</a>
+          <button class="btn btn-danger btn-sm" (click)="delete(o.id!)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

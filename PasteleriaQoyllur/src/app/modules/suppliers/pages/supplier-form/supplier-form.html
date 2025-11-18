@@ -1,0 +1,42 @@
+<div class="container mt-4">
+  <h3 class="text-secondary">
+    {{ isEdit ? 'Editar Proveedor ✏️' : 'Nuevo Proveedor ➕' }}
+  </h3>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+
+    <div class="mb-3">
+      <label class="form-label">Nombre</label>
+      <input class="form-control" formControlName="name">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Persona de contacto</label>
+      <input class="form-control" formControlName="contactName">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Teléfono</label>
+      <input class="form-control" formControlName="phone">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input class="form-control" formControlName="email" type="email">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Dirección</label>
+      <input class="form-control" formControlName="address">
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="active" formControlName="active">
+      <label for="active" class="form-check-label">Activo</label>
+    </div>
+
+    <button class="btn btn-warning">💾 Guardar</button>
+    <a routerLink="/suppliers" class="btn btn-secondary ms-2">↩ Volver</a>
+  </form>
+  <br>
+</div>

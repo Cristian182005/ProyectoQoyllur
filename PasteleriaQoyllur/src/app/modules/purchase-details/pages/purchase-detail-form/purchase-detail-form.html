@@ -1,0 +1,47 @@
+<div class="container mt-4">
+
+  <h3 class="text-secondary mb-4">
+    {{ isEdit ? 'Editar Detalle de Compra ✏️' : 'Nuevo Detalle de Compra 📦' }}
+  </h3>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+
+    <!-- ORDEN DE COMPRA -->
+    <div class="mb-3">
+      <label class="form-label">Orden de Compra</label>
+      <select class="form-control" formControlName="purchaseOrderId">
+        <option value="" disabled>Seleccione orden</option>
+        <option *ngFor="let o of purchaseOrders" [value]="o.id">
+          OC-{{ o.id }} — {{ o.date }}
+        </option>
+      </select>
+    </div>
+
+    <!-- INGREDIENTE -->
+    <div class="mb-3">
+      <label class="form-label">Ingrediente</label>
+      <select class="form-control" formControlName="ingredientId">
+        <option value="" disabled>Seleccione ingrediente</option>
+        <option *ngFor="let ing of ingredients" [value]="ing.id">
+          {{ ing.name }}
+        </option>
+      </select>
+    </div>
+
+    <!-- CANTIDAD -->
+    <div class="mb-3">
+      <label class="form-label">Cantidad</label>
+      <input type="number" min="0" step="0.01" class="form-control" formControlName="quantity">
+    </div>
+
+    <!-- PRECIO UNITARIO -->
+    <div class="mb-3">
+      <label class="form-label">Precio Unitario (S/)</label>
+      <input type="number" min="0" step="0.01" class="form-control" formControlName="unitPrice">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a routerLink="/purchase-details" class="btn btn-secondary ms-2">Cancelar</a>
+  </form>
+  <br>
+</div>

@@ -20,7 +20,8 @@ const routes: Routes = [
   {
     path: 'products',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./modules/products/products-module').then((m) => m.ProductsModule),
+    loadChildren: () =>
+      import('./modules/products/products-module').then((m) => m.ProductsModule),
   },
   {
     path: 'categories',
@@ -37,7 +38,44 @@ const routes: Routes = [
   {
     path: 'orders',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./modules/orders/orders-module').then((m) => m.OrdersModule),
+    loadChildren: () =>
+      import('./modules/orders/orders-module').then((m) => m.OrdersModule),
+  },
+  {
+    path: 'suppliers',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/suppliers/suppliers-module').then(m => m.SuppliersModule)
+  },
+  {
+    path: 'units',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/units/units-module').then(m => m.UnitsModule)
+  },
+  {
+    path: 'ingredients',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/ingredients/ingredients-module').then(m => m.IngredientsModule)
+  },
+  {
+    path: 'recipes',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/recipes/recipes-module').then(m => m.RecipesModule)
+  },
+  {
+    path: 'purchase-order',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/purchase-order/purchase-order-module').then(m => m.PurchaseOrderModule)
+  },
+  {
+    path: 'purchase-details',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/purchase-details/purchase-details-module').then(m => m.PurchaseDetailsModule)
   },
 
   // Redirección por defecto

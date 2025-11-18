@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h3 class="text-secondary mb-3">
+    {{ isEdit ? 'Editar Orden de Compra' : 'Nueva Orden de Compra' }}
+  </h3>
+
+  <form [formGroup]="orderForm" (ngSubmit)="save()">
+    <label class="form-label">Proveedor</label>
+    <select class="form-control mb-3" formControlName="supplierId">
+      <option value="" disabled>Seleccione proveedor</option>
+      <option *ngFor="let s of suppliers" [value]="s.id">
+        {{ s.name }}
+      </option>
+    </select>
+
+    <label class="form-label">Fecha</label>
+    <input type="date" class="form-control mb-3" formControlName="date" />
+
+    <label class="form-label">Total (S/)</label>
+    <input type="number" class="form-control mb-3" formControlName="total" min="0" />
+
+    <button class="btn btn-success">💾 Guardar</button>
+    <a routerLink="/purchase-orders" class="btn btn-secondary ms-2">↩ Volver</a>
+  </form>
+  <br />
+</div>

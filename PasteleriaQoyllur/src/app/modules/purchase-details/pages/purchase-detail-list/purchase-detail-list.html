@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <h3 class="text-secondary mb-3">Detalles de Compra 📦</h3>
+
+  <div class="text-end mb-3">
+    <a routerLink="/purchase-details/new" class="btn btn-warning">➕ Nuevo Detalle</a>
+  </div>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-warning">
+      <tr>
+        <th>ID</th>
+        <th>Orden</th>
+        <th>Ingrediente</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Subtotal</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of details">
+        <td>{{ d.id }}</td>
+        <td>{{ d.purchaseOrderId }}</td>
+        <td>{{ d.ingredientId }}</td>
+        <td>{{ d.quantity }}</td>
+        <td>{{ d.unitPrice }}</td>
+        <td>{{ d.subtotal }}</td>
+        <td class="text-center">
+          <button class="btn btn-info btn-sm me-2" (click)="edit(d.id)">✏️</button>
+          <button class="btn btn-danger btn-sm" (click)="delete(d.id)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

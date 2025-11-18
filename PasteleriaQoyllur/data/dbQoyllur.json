@@ -13,101 +13,171 @@
   ],
   "products": [
     {
-      "name": "Torta de chocolate",
-      "category": "Pastel",
-      "price": 8,
-      "available": true,
-      "id": 1
-    },
-    {
-      "name": "Arroz con leche",
-      "category": "Mazamorra",
-      "price": 2.5,
-      "available": true,
-      "id": 2
-    },
-    {
-      "name": "Mazamorra Morada",
-      "category": "Mazamorra",
-      "price": 3,
-      "available": true,
-      "id": 3
-    },
-    {
-      "name": "Keke de naranja",
-      "category": "Keke",
-      "price": 1.5,
-      "available": true,
-      "id": 4
-    },
-    {
-      "name": "Gelatina de Fresa",
-      "category": "Gelatina",
-      "price": 2,
-      "available": true,
-      "id": 5
-    },
-    {
-      "name": "Tarta de cereza",
-      "category": "Pastel",
-      "price": 32,
-      "available": true,
-      "id": 6
-    },
-    {
-      "name": "Keke de Choco Chips",
-      "category": "Keke",
-      "price": 3,
-      "available": true,
-      "id": 7
-    },
-    {
-      "name": "Torta de Vainilla",
-      "category": "Pastel",
-      "price": 5.5,
-      "available": true,
-      "id": 8
-    },
-    {
-      "name": "Brownies",
-      "category": "Keke",
-      "price": 3.5,
-      "available": true,
-      "id": 9
-    },
-    {
-      "name": "Tartaleta de Maracuya",
-      "category": "Tarta",
-      "price": 6.5,
-      "available": true,
-      "id": 11
-    },
-    {
-      "name": "Tartaleta de Fresa",
-      "category": "Tarta",
-      "price": 7.5,
-      "available": true,
-      "id": 12
-    },
-    {
-      "name": "Keke de fresa",
-      "category": "Keke",
-      "price": 5,
-      "available": false,
-      "id": 13
-    },
-    {
-      "name": "Torta de Fresa",
+      "id": 1,
+      "name": "Torta Selva Negra",
       "categoryId": 1,
-      "price": 5,
-      "available": true,
-      "id": 14
+      "price": 85,
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Pastel Red Velvet",
+      "categoryId": 2,
+      "price": 65,
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Cupcake de Vainilla",
+      "categoryId": 3,
+      "price": 6.5,
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Galletas Chispas de Chocolate",
+      "categoryId": 4,
+      "price": 2.5,
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "Cheesecake de Fresa",
+      "categoryId": 5,
+      "price": 35,
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "Pan Ciabatta",
+      "categoryId": 6,
+      "price": 4,
+      "available": true
+    },
+    {
+      "id": 7,
+      "name": "Helado de Chocolate",
+      "categoryId": 7,
+      "price": 8,
+      "available": true
+    },
+    {
+      "id": 8,
+      "name": "Pan Brioche",
+      "categoryId": 8,
+      "price": 5.5,
+      "available": true
+    },
+    {
+      "id": 9,
+      "name": "Bizcocho de Limón",
+      "categoryId": 9,
+      "price": 20,
+      "available": true
+    },
+    {
+      "id": 10,
+      "name": "Queque Marmoleado",
+      "categoryId": 10,
+      "price": 18,
+      "available": true
+    },
+    {
+      "id": 11,
+      "name": "Trufas de Chocolate",
+      "categoryId": 11,
+      "price": 12,
+      "available": true
+    },
+    {
+      "id": 12,
+      "name": "Pie de Manzana",
+      "categoryId": 12,
+      "price": 30,
+      "available": true
+    },
+    {
+      "id": 13,
+      "name": "Empanada de Pollo",
+      "categoryId": 13,
+      "price": 4,
+      "available": true
+    },
+    {
+      "id": 14,
+      "name": "Chocolate Caliente",
+      "categoryId": 14,
+      "price": 7,
+      "available": true
+    },
+    {
+      "id": 15,
+      "name": "Decoración Fondant Premium",
+      "categoryId": 15,
+      "price": 10,
+      "available": true
     }
   ],
   "categories": [
     {
-      "name": "Tortas",
-      "id": 1
+      "id": 1,
+      "name": "Tortas"
+    },
+    {
+      "id": 2,
+      "name": "Pasteles"
+    },
+    {
+      "id": 3,
+      "name": "Cupcakes"
+    },
+    {
+      "id": 4,
+      "name": "Galletas"
+    },
+    {
+      "id": 5,
+      "name": "Postres Fríos"
+    },
+    {
+      "id": 6,
+      "name": "Panadería"
+    },
+    {
+      "id": 7,
+      "name": "Helados"
+    },
+    {
+      "id": 8,
+      "name": "Panes Especiales"
+    },
+    {
+      "id": 9,
+      "name": "Bizcochos"
+    },
+    {
+      "id": 10,
+      "name": "Queques"
+    },
+    {
+      "id": 11,
+      "name": "Chocolatería"
+    },
+    {
+      "id": 12,
+      "name": "Pies y Tartas"
+    },
+    {
+      "id": 13,
+      "name": "Salados"
+    },
+    {
+      "id": 14,
+      "name": "Bebidas"
+    },
+    {
+      "id": 15,
+      "name": "Decoraciones"
     }
   ],
   "customers": [
@@ -139,136 +209,930 @@
   "orders": [
     {
       "customerId": 1,
-      "date": "2025-11-13",
-      "total": 26,
+      "date": "2025-11-17",
+      "total": 255,
       "items": [
         {
-          "productId": "6",
-          "quantity": 1,
-          "price": 3
-        },
-        {
           "productId": "1",
-          "quantity": 5,
-          "price": 3
-        },
-        {
-          "productId": "6",
-          "quantity": 2,
-          "price": 4
+          "quantity": 3,
+          "price": 85
         }
       ],
       "id": 1
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "DulcePan SAC",
+      "contactName": "María Torres",
+      "phone": "987654321",
+      "email": "contacto@dulcepan.com",
+      "address": "Av. La Marina 234, Lima",
+      "active": true
     },
     {
-      "customerId": 1,
-      "date": "2024-06-11",
-      "total": 204,
-      "items": [
-        {
-          "productId": "6",
-          "quantity": 6,
-          "price": 32
-        },
-        {
-          "productId": "7",
-          "quantity": 4,
-          "price": 3
-        }
-      ],
+      "id": 2,
+      "name": "AgroMolinos Perú",
+      "contactName": "José Martínez",
+      "phone": "945123678",
+      "email": "ventas@agromolinos.com",
+      "address": "Jr. Los Molinos 455, Ate",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Lácteos Andinos",
+      "contactName": "Lucía Fernández",
+      "phone": "963852741",
+      "email": "info@lacteosandinos.com",
+      "address": "Av. Javier Prado 883, Lima",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Insumos Reposteros S.A.",
+      "contactName": "Carlos Herrera",
+      "phone": "912345678",
+      "email": "c.herrera@insumosreposteros.pe",
+      "address": "Calle Los Olivos 120, San Miguel",
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Harinas del Sur",
+      "contactName": "Ana López",
+      "phone": "958456321",
+      "email": "ventas@harinassur.com",
+      "address": "Av. Circunvalación 1402, Arequipa",
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "PeruCacao Import",
+      "contactName": "Ricardo Jiménez",
+      "phone": "987120450",
+      "email": "info@perucacao.com",
+      "address": "Jr. Huaura 332, Lima",
+      "active": true
+    },
+    {
+      "id": 7,
+      "name": "GlobalSugar Perú",
+      "contactName": "Daniel Castro",
+      "phone": "999775533",
+      "email": "ventas@globalsugar.pe",
+      "address": "Av. Guardia Civil 750, Surquillo",
+      "active": true
+    },
+    {
+      "id": 8,
+      "name": "FrostDecor",
+      "contactName": "Patricia Ramos",
+      "phone": "956332110",
+      "email": "contact@frostdecor.com",
+      "address": "Calle Frost 120, Miraflores",
+      "active": true
+    },
+    {
+      "id": 9,
+      "name": "Aceites del Pacífico",
+      "contactName": "Leonardo Silva",
+      "phone": "981223344",
+      "email": "ventas@aceitespacifico.pe",
+      "address": "Av. Pacífico 902, Callao",
+      "active": true
+    },
+    {
+      "id": 10,
+      "name": "Envases Perú",
+      "contactName": "Carmen Rojas",
+      "phone": "900112233",
+      "email": "ventas@envasesperu.com",
+      "address": "Jr. Piura 144, Barranco",
+      "active": true
+    },
+    {
+      "id": 11,
+      "name": "CacaoFino Importaciones",
+      "contactName": "Roberto Quispe",
+      "phone": "947745633",
+      "email": "info@cacaofino.pe",
+      "address": "Av. Grau 612, Trujillo",
+      "active": true
+    },
+    {
+      "id": 12,
+      "name": "Repostería AltoAndina",
+      "contactName": "Yessenia Gómez",
+      "phone": "911332211",
+      "email": "ventas@altoandina.pe",
+      "address": "Av. Cusco 300, Cusco",
+      "active": true
+    },
+    {
+      "id": 13,
+      "name": "FrutosSecos Andes",
+      "contactName": "Mauricio Vega",
+      "phone": "977225588",
+      "email": "contact@frutossecosandes.com",
+      "address": "Av. Los Próceres 1200, Lima",
+      "active": true
+    },
+    {
+      "id": 14,
+      "name": "Levaduras Premium",
+      "contactName": "Claudia Ramírez",
+      "phone": "955113355",
+      "email": "info@levaduraspremium.pe",
+      "address": "Jr. Lima 440, Chiclayo",
+      "active": true
+    },
+    {
+      "id": 15,
+      "name": "Cremas & Sabores",
+      "contactName": "Santiago Pérez",
+      "phone": "903884466",
+      "email": "ventas@cremassabores.com",
+      "address": "Av. Progreso 700, Huancayo",
+      "active": true
+    }
+  ],
+  "purchaseOrder": [
+    {
+      "id": 1,
+      "supplierId": 1,
+      "date": "2025-01-05",
+      "total": 480.5
+    },
+    {
+      "id": 2,
+      "supplierId": 3,
+      "date": "2025-01-10",
+      "total": 950
+    },
+    {
+      "id": 3,
+      "supplierId": 2,
+      "date": "2025-01-15",
+      "total": 1200.9
+    },
+    {
+      "id": 4,
+      "supplierId": 5,
+      "date": "2025-01-18",
+      "total": 560.3
+    },
+    {
+      "id": 5,
+      "supplierId": 4,
+      "date": "2025-01-22",
+      "total": 840
+    },
+    {
+      "id": 6,
+      "supplierId": 6,
+      "date": "2025-01-30",
+      "total": 1115.75
+    },
+    {
+      "id": 7,
+      "supplierId": 7,
+      "date": "2025-02-01",
+      "total": 620.1
+    },
+    {
+      "id": 8,
+      "supplierId": 9,
+      "date": "2025-02-06",
+      "total": 780.5
+    },
+    {
+      "id": 9,
+      "supplierId": 12,
+      "date": "2025-02-10",
+      "total": 450.4
+    },
+    {
+      "id": 10,
+      "supplierId": 8,
+      "date": "2025-02-14",
+      "total": 1230.99
+    },
+    {
+      "id": 11,
+      "supplierId": 10,
+      "date": "2025-02-17",
+      "total": 399.99
+    },
+    {
+      "id": 12,
+      "supplierId": 11,
+      "date": "2025-02-20",
+      "total": 880
+    },
+    {
+      "id": 13,
+      "supplierId": 15,
+      "date": "2025-02-22",
+      "total": 1330.75
+    },
+    {
+      "id": 14,
+      "supplierId": 13,
+      "date": "2025-02-25",
+      "total": 520
+    },
+    {
+      "id": 15,
+      "supplierId": 14,
+      "date": "2025-02-28",
+      "total": 940.2
+    }
+  ],
+  "purchaseDetails": [
+    {
+      "id": 1,
+      "purchaseOrderId": 1,
+      "ingredientId": 1,
+      "quantity": 10,
+      "unitPrice": 5,
+      "subtotal": 50
+    },
+    {
+      "id": 2,
+      "purchaseOrderId": 2,
+      "ingredientId": 2,
+      "quantity": 20,
+      "unitPrice": 8,
+      "subtotal": 160
+    },
+    {
+      "id": 3,
+      "purchaseOrderId": 3,
+      "ingredientId": 3,
+      "quantity": 15,
+      "unitPrice": 6,
+      "subtotal": 90
+    },
+    {
+      "id": 4,
+      "purchaseOrderId": 4,
+      "ingredientId": 4,
+      "quantity": 12,
+      "unitPrice": 9,
+      "subtotal": 108
+    },
+    {
+      "id": 5,
+      "purchaseOrderId": 5,
+      "ingredientId": 5,
+      "quantity": 25,
+      "unitPrice": 7,
+      "subtotal": 175
+    },
+    {
+      "id": 6,
+      "purchaseOrderId": 6,
+      "ingredientId": 6,
+      "quantity": 18,
+      "unitPrice": 11,
+      "subtotal": 198
+    },
+    {
+      "id": 7,
+      "purchaseOrderId": 7,
+      "ingredientId": 7,
+      "quantity": 30,
+      "unitPrice": 4,
+      "subtotal": 120
+    },
+    {
+      "id": 8,
+      "purchaseOrderId": 8,
+      "ingredientId": 8,
+      "quantity": 14,
+      "unitPrice": 3,
+      "subtotal": 42
+    },
+    {
+      "id": 9,
+      "purchaseOrderId": 9,
+      "ingredientId": 9,
+      "quantity": 16,
+      "unitPrice": 12,
+      "subtotal": 192
+    },
+    {
+      "id": 10,
+      "purchaseOrderId": 10,
+      "ingredientId": 10,
+      "quantity": 22,
+      "unitPrice": 9,
+      "subtotal": 198
+    },
+    {
+      "id": 11,
+      "purchaseOrderId": 11,
+      "ingredientId": 11,
+      "quantity": 8,
+      "unitPrice": 14,
+      "subtotal": 112
+    },
+    {
+      "id": 12,
+      "purchaseOrderId": 12,
+      "ingredientId": 12,
+      "quantity": 5,
+      "unitPrice": 20,
+      "subtotal": 100
+    },
+    {
+      "id": 13,
+      "purchaseOrderId": 13,
+      "ingredientId": 13,
+      "quantity": 40,
+      "unitPrice": 2.5,
+      "subtotal": 100
+    },
+    {
+      "id": 14,
+      "purchaseOrderId": 14,
+      "ingredientId": 14,
+      "quantity": 10,
+      "unitPrice": 16,
+      "subtotal": 160
+    },
+    {
+      "id": 15,
+      "purchaseOrderId": 15,
+      "ingredientId": 15,
+      "quantity": 7,
+      "unitPrice": 18,
+      "subtotal": 126
+    }
+  ],
+  "units": [
+    {
+      "id": 1,
+      "name": "Kilogramos",
+      "abbreviation": "kg"
+    },
+    {
+      "id": 2,
+      "name": "Gramos",
+      "abbreviation": "g"
+    },
+    {
+      "id": 3,
+      "name": "Litros",
+      "abbreviation": "l"
+    },
+    {
+      "id": 4,
+      "name": "Mililitros",
+      "abbreviation": "ml"
+    },
+    {
+      "id": 5,
+      "name": "Unidad",
+      "abbreviation": "und"
+    },
+    {
+      "id": 6,
+      "name": "Cucharadas",
+      "abbreviation": "cdas"
+    },
+    {
+      "id": 7,
+      "name": "Cucharaditas",
+      "abbreviation": "cdtas"
+    },
+    {
+      "id": 8,
+      "name": "Tazas",
+      "abbreviation": "tza"
+    },
+    {
+      "id": 9,
+      "name": "Onzas",
+      "abbreviation": "oz"
+    },
+    {
+      "id": 10,
+      "name": "Pizcas",
+      "abbreviation": "pz"
+    },
+    {
+      "id": 11,
+      "name": "Bloques",
+      "abbreviation": "blq"
+    },
+    {
+      "id": 12,
+      "name": "Potes",
+      "abbreviation": "pote"
+    },
+    {
+      "id": 13,
+      "name": "Paquetes",
+      "abbreviation": "paq"
+    },
+    {
+      "id": 14,
+      "name": "Cajas",
+      "abbreviation": "caja"
+    },
+    {
+      "id": 15,
+      "name": "Rodajas",
+      "abbreviation": "rod"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "Harina",
+      "unitId": 2,
+      "cost": 0.3,
+      "active": true,
+      "id": 1
+    },
+    {
+      "name": "Azúcar",
+      "unitId": 2,
+      "cost": 0.5,
+      "active": true,
       "id": 2
     },
     {
-      "customerId": 2,
-      "date": "2023-05-18",
-      "total": 25.5,
-      "items": [
-        {
-          "productId": "7",
-          "quantity": 3,
-          "price": 3
-        },
-        {
-          "productId": "8",
-          "quantity": 3,
-          "price": 5.5
-        }
-      ],
-      "id": 3
+      "id": 3,
+      "name": "Mantequilla",
+      "unitId": 1,
+      "cost": 12,
+      "active": true
     },
     {
-      "customerId": 3,
-      "date": "2022-06-17",
-      "total": 348.5,
-      "items": [
-        {
-          "productId": "3",
-          "quantity": 5,
-          "price": 3
-        },
-        {
-          "productId": "9",
-          "quantity": 3,
-          "price": 3.5
-        },
-        {
-          "productId": "4",
-          "quantity": 2,
-          "price": 1.5
-        },
-        {
-          "productId": "6",
-          "quantity": 10,
-          "price": 32
-        }
-      ],
-      "id": 4
+      "id": 4,
+      "name": "Huevos",
+      "unitId": 5,
+      "cost": 0.5,
+      "active": true
     },
     {
-      "customerId": 1,
-      "date": "2021-08-18",
-      "total": 335.5,
-      "items": [
-        {
-          "productId": "1",
-          "quantity": 4,
-          "price": 8
-        },
-        {
-          "productId": "6",
-          "quantity": 8,
-          "price": 32
-        },
-        {
-          "productId": "9",
-          "quantity": 5,
-          "price": 3.5
-        },
-        {
-          "productId": "3",
-          "quantity": 10,
-          "price": 3
-        }
-      ],
-      "id": 5
+      "id": 5,
+      "name": "Leche",
+      "unitId": 3,
+      "cost": 3,
+      "active": true
     },
     {
-      "customerId": 4,
-      "date": "2018-06-13",
-      "total": 59.5,
-      "items": [
-        {
-          "productId": "11",
-          "quantity": 3,
-          "price": 6.5
-        },
-        {
-          "productId": "1",
-          "quantity": 5,
-          "price": 8
-        }
-      ],
-      "id": 6
+      "id": 6,
+      "name": "Cacao en Polvo",
+      "unitId": 2,
+      "cost": 0.1,
+      "active": true
+    },
+    {
+      "id": 7,
+      "name": "Crema de Leche",
+      "unitId": 3,
+      "cost": 5,
+      "active": true
+    },
+    {
+      "id": 8,
+      "name": "Fresas",
+      "unitId": 1,
+      "cost": 8,
+      "active": true
+    },
+    {
+      "id": 9,
+      "name": "Queso Crema",
+      "unitId": 11,
+      "cost": 4.5,
+      "active": true
+    },
+    {
+      "id": 10,
+      "name": "Glaseado",
+      "unitId": 12,
+      "cost": 2.5,
+      "active": true
+    },
+    {
+      "id": 11,
+      "name": "Esencia de Vainilla",
+      "unitId": 4,
+      "cost": 0.15,
+      "active": true
+    },
+    {
+      "name": "Polvo de Hornear",
+      "unitId": 7,
+      "cost": 0.2,
+      "active": true,
+      "id": 12
+    },
+    {
+      "name": "Chispas de Chocolate",
+      "unitId": 2,
+      "cost": 0.15,
+      "active": true,
+      "id": 13
+    },
+    {
+      "name": "Gelatina sin Sabor",
+      "unitId": 7,
+      "cost": 0.1,
+      "active": true,
+      "id": 14
+    },
+    {
+      "id": 15,
+      "name": "Cerezas",
+      "unitId": 15,
+      "cost": 1,
+      "active": true
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "productId": 1,
+      "description": "Receta estándar de Torta Selva Negra"
+    },
+    {
+      "id": 2,
+      "productId": 2,
+      "description": "Pastel Red Velvet clásico"
+    },
+    {
+      "id": 3,
+      "productId": 3,
+      "description": "Cupcake de vainilla esponjoso"
+    },
+    {
+      "id": 4,
+      "productId": 4,
+      "description": "Galletas con chispas de chocolate"
+    },
+    {
+      "id": 5,
+      "productId": 5,
+      "description": "Cheesecake cremoso con fresas"
+    },
+    {
+      "id": 6,
+      "productId": 6,
+      "description": "Pan Ciabatta artesanal"
+    },
+    {
+      "id": 7,
+      "productId": 7,
+      "description": "Helado casero de chocolate"
+    },
+    {
+      "id": 8,
+      "productId": 8,
+      "description": "Receta de pan brioche mantecoso"
+    },
+    {
+      "id": 9,
+      "productId": 9,
+      "description": "Bizcocho suave de limón"
+    },
+    {
+      "id": 10,
+      "productId": 10,
+      "description": "Queque marmoleado clásico"
+    },
+    {
+      "id": 11,
+      "productId": 11,
+      "description": "Trufas de chocolate premium"
+    },
+    {
+      "id": 12,
+      "productId": 12,
+      "description": "Pie de manzana estilo casero"
+    },
+    {
+      "id": 13,
+      "productId": 13,
+      "description": "Empanada de pollo jugosa"
+    },
+    {
+      "id": 14,
+      "productId": 14,
+      "description": "Chocolate caliente espeso"
+    },
+    {
+      "id": 15,
+      "productId": 15,
+      "description": "Decoración con fondant premium"
+    }
+  ],
+  "recipeDetails": [
+    {
+      "id": 1,
+      "recipeId": 1,
+      "ingredientId": 1,
+      "quantity": 200
+    },
+    {
+      "id": 2,
+      "recipeId": 1,
+      "ingredientId": 2,
+      "quantity": 150
+    },
+    {
+      "id": 3,
+      "recipeId": 1,
+      "ingredientId": 6,
+      "quantity": 50
+    },
+    {
+      "id": 4,
+      "recipeId": 1,
+      "ingredientId": 4,
+      "quantity": 3
+    },
+    {
+      "id": 5,
+      "recipeId": 1,
+      "ingredientId": 7,
+      "quantity": 150
+    },
+    {
+      "id": 6,
+      "recipeId": 2,
+      "ingredientId": 1,
+      "quantity": 180
+    },
+    {
+      "id": 7,
+      "recipeId": 2,
+      "ingredientId": 2,
+      "quantity": 160
+    },
+    {
+      "id": 8,
+      "recipeId": 2,
+      "ingredientId": 11,
+      "quantity": 5
+    },
+    {
+      "id": 9,
+      "recipeId": 2,
+      "ingredientId": 4,
+      "quantity": 3
+    },
+    {
+      "id": 10,
+      "recipeId": 3,
+      "ingredientId": 1,
+      "quantity": 100
+    },
+    {
+      "id": 11,
+      "recipeId": 3,
+      "ingredientId": 2,
+      "quantity": 80
+    },
+    {
+      "id": 12,
+      "recipeId": 3,
+      "ingredientId": 11,
+      "quantity": 4
+    },
+    {
+      "id": 13,
+      "recipeId": 3,
+      "ingredientId": 12,
+      "quantity": 2
+    },
+    {
+      "id": 14,
+      "recipeId": 4,
+      "ingredientId": 1,
+      "quantity": 120
+    },
+    {
+      "id": 15,
+      "recipeId": 4,
+      "ingredientId": 13,
+      "quantity": 60
+    },
+    {
+      "id": 16,
+      "recipeId": 4,
+      "ingredientId": 2,
+      "quantity": 60
+    },
+    {
+      "id": 17,
+      "recipeId": 5,
+      "ingredientId": 9,
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "recipeId": 5,
+      "ingredientId": 8,
+      "quantity": 150
+    },
+    {
+      "id": 19,
+      "recipeId": 5,
+      "ingredientId": 2,
+      "quantity": 120
+    },
+    {
+      "id": 20,
+      "recipeId": 5,
+      "ingredientId": 14,
+      "quantity": 1
+    },
+    {
+      "id": 21,
+      "recipeId": 6,
+      "ingredientId": 1,
+      "quantity": 300
+    },
+    {
+      "id": 22,
+      "recipeId": 6,
+      "ingredientId": 3,
+      "quantity": 80
+    },
+    {
+      "id": 23,
+      "recipeId": 6,
+      "ingredientId": 12,
+      "quantity": 5
+    },
+    {
+      "id": 24,
+      "recipeId": 7,
+      "ingredientId": 7,
+      "quantity": 200
+    },
+    {
+      "id": 25,
+      "recipeId": 7,
+      "ingredientId": 6,
+      "quantity": 40
+    },
+    {
+      "id": 26,
+      "recipeId": 7,
+      "ingredientId": 2,
+      "quantity": 50
+    },
+    {
+      "id": 27,
+      "recipeId": 8,
+      "ingredientId": 1,
+      "quantity": 200
+    },
+    {
+      "id": 28,
+      "recipeId": 8,
+      "ingredientId": 3,
+      "quantity": 100
+    },
+    {
+      "id": 29,
+      "recipeId": 8,
+      "ingredientId": 4,
+      "quantity": 2
+    },
+    {
+      "id": 30,
+      "recipeId": 9,
+      "ingredientId": 1,
+      "quantity": 180
+    },
+    {
+      "id": 31,
+      "recipeId": 9,
+      "ingredientId": 2,
+      "quantity": 150
+    },
+    {
+      "id": 32,
+      "recipeId": 9,
+      "ingredientId": 11,
+      "quantity": 3
+    },
+    {
+      "id": 33,
+      "recipeId": 10,
+      "ingredientId": 1,
+      "quantity": 200
+    },
+    {
+      "id": 34,
+      "recipeId": 10,
+      "ingredientId": 2,
+      "quantity": 150
+    },
+    {
+      "id": 35,
+      "recipeId": 10,
+      "ingredientId": 6,
+      "quantity": 40
+    },
+    {
+      "id": 36,
+      "recipeId": 11,
+      "ingredientId": 13,
+      "quantity": 100
+    },
+    {
+      "id": 37,
+      "recipeId": 11,
+      "ingredientId": 3,
+      "quantity": 50
+    },
+    {
+      "id": 38,
+      "recipeId": 11,
+      "ingredientId": 11,
+      "quantity": 2
+    },
+    {
+      "id": 39,
+      "recipeId": 12,
+      "ingredientId": 1,
+      "quantity": 150
+    },
+    {
+      "id": 40,
+      "recipeId": 12,
+      "ingredientId": 8,
+      "quantity": 200
+    },
+    {
+      "id": 41,
+      "recipeId": 12,
+      "ingredientId": 2,
+      "quantity": 100
+    },
+    {
+      "id": 42,
+      "recipeId": 13,
+      "ingredientId": 4,
+      "quantity": 2
+    },
+    {
+      "id": 43,
+      "recipeId": 13,
+      "ingredientId": 1,
+      "quantity": 100
+    },
+    {
+      "id": 44,
+      "recipeId": 13,
+      "ingredientId": 3,
+      "quantity": 50
+    },
+    {
+      "id": 45,
+      "recipeId": 14,
+      "ingredientId": 11,
+      "quantity": 5
+    },
+    {
+      "id": 46,
+      "recipeId": 14,
+      "ingredientId": 2,
+      "quantity": 50
+    },
+    {
+      "id": 47,
+      "recipeId": 14,
+      "ingredientId": 6,
+      "quantity": 20
+    },
+    {
+      "id": 48,
+      "recipeId": 15,
+      "ingredientId": 10,
+      "quantity": 1
+    },
+    {
+      "id": 49,
+      "recipeId": 15,
+      "ingredientId": 15,
+      "quantity": 4
+    },
+    {
+      "id": 50,
+      "recipeId": 15,
+      "ingredientId": 11,
+      "quantity": 2
     }
   ]
 }

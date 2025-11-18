@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h3 class="text-secondary">
+    {{ isEdit ? 'Editar Ingrediente ✏️' : 'Nuevo Ingrediente ➕' }}
+  </h3>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+
+    <div class="mb-3">
+      <label class="form-label">Nombre del ingrediente</label>
+      <input class="form-control" formControlName="name">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Unidad de medida</label>
+      <select class="form-control" formControlName="unitId">
+        <option value="" disabled selected>Seleccione unidad</option>
+        <option *ngFor="let u of units" [value]="u.id">
+          {{ u.name }} ({{ u.abbreviation }})
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Costo por unidad (S/)</label>
+      <input type="number" class="form-control" formControlName="cost">
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="active" formControlName="active">
+      <label for="active" class="form-check-label">Activo</label>
+    </div>
+
+    <button class="btn btn-warning">💾 Guardar</button>
+    <a routerLink="/ingredients" class="btn btn-secondary ms-2">↩ Volver</a>
+
+  </form>
+  <br>
+</div>

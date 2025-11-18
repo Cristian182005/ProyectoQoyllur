@@ -1,27 +1,49 @@
 <div class="container mt-5 text-center">
+
   <h2>Bienvenido a <span class="text-warning">QOYLLUR</span> 🍰</h2>
   <p class="text-muted mb-4">
-    Panel de control de la pastelería — gestiona tus productos, pedidos y clientes.
+    Panel de control de la pastelería — vista general de la gestión.
   </p>
 
   <app-summary-cards></app-summary-cards>
   <app-sales-chart></app-sales-chart>
 
+  <!-- ========================================= -->
+  <!-- 🔥 GESTIÓN RÁPIDA - CATEGORIZADA -->
+  <!-- ========================================= -->
+
   <div class="mt-5">
-    <h4 class="mb-3 text-secondary">Gestión rápida</h4>
+    <h4 class="mb-4 text-secondary">Gestión rápida</h4>
 
-    <div class="d-flex justify-content-center flex-wrap gap-3">
+    <!-- 🟦 GESTIÓN COMERCIAL -->
+    <h5 class="text-primary mb-3">📦 Gestión Comercial</h5>
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
       <a routerLink="/products" class="btn btn-warning px-4 py-2 fw-semibold"> 🧁 Productos </a>
-
       <a routerLink="/categories" class="btn btn-secondary px-4 py-2 fw-semibold"> 🍰 Categorías </a>
-
-      <a routerLink="/customers" class="btn btn-info px-4 py-2 fw-semibold text-white">
-        👥 Clientes
-      </a>
-
+      <a routerLink="/customers" class="btn btn-info px-4 py-2 fw-semibold text-white"> 👥 Clientes </a>
       <a routerLink="/orders" class="btn btn-success px-4 py-2 fw-semibold"> 🧾 Pedidos </a>
     </div>
+
+    <!-- 🟩 GESTIÓN DE PROVEEDORES -->
+    <h5 class="text-success mb-3">🏭 Gestión de Proveedores</h5>
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+      <a routerLink="/suppliers" class="btn btn-outline-success px-4 py-2 fw-semibold"> 🚚 Proveedores </a>
+      <a routerLink="/purchase-order" class="btn btn-outline-success px-4 py-2 fw-semibold"> 📄 Órdenes de Compra </a>
+      <a routerLink="/purchase-details" class="btn btn-outline-success px-4 py-2 fw-semibold"> 📦 Detalles de Compra </a>
+    </div>
+
+    <!-- 🟨 GESTIÓN DE PRODUCCIÓN -->
+    <h5 class="text-warning mb-3">👨‍🍳 Producción y Recetas</h5>
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+      <a routerLink="/ingredients" class="btn btn-outline-warning px-4 py-2 fw-semibold"> 🥣 Ingredientes </a>
+      <a routerLink="/units" class="btn btn-outline-warning px-4 py-2 fw-semibold"> ⚖️ Unidades </a>
+      <a routerLink="/recipes" class="btn btn-outline-warning px-4 py-2 fw-semibold"> 📘 Recetas </a>
+      <a routerLink="/batches" class="btn btn-outline-warning px-4 py-2 fw-semibold"> 🧪 Lotes de Producción </a>
+    </div>
+
   </div>
-  <br />
-  <br />
+
+  <br/>
+  <br/>
+
 </div>
