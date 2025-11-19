@@ -18,11 +18,11 @@
   ],
   "products": [
     {
-      "id": 1,
       "name": "Torta Selva Negra",
       "categoryId": 1,
-      "price": 85,
-      "available": true
+      "price": 45,
+      "available": true,
+      "id": 1
     },
     {
       "id": 2,
@@ -128,13 +128,6 @@
       "price": 150,
       "available": true,
       "id": 16
-    },
-    {
-      "name": "Pan integral",
-      "categoryId": 16,
-      "price": 1.5,
-      "available": true,
-      "id": 17
     }
   ],
   "categories": [
