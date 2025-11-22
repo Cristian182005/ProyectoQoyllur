@@ -1,4 +1,41 @@
-# PasteleriaQoyllur
+# 🍰 Pastelería Qoyllur – Sistema de Gestión (Angular)
+
+Proyecto académico desarrollado con Angular CLI · Arquitectura Modular · CRUD completo · JSON API
+
+## 📌 1. Definición del Proyecto
+
+**Pastelería Qoyllur** es un sistema web de gestión integral para una pastelería, cuyo objetivo es administrar eficientemente:
+
+- Proveedores  
+- Ingredientes  
+- Unidades de medida  
+- Productos  
+- Categorías  
+- Recetas  
+- Detalles de recetas  
+- Compras (órdenes y detalles)  
+- Ventas (órdenes y detalles)  
+- Clientes  
+- Usuarios  
+- Visualización de ventas mediante gráficos  
+- Navegación general (menú, header, footer)
+
+Este sistema permite controlar desde la adquisición de insumos hasta la creación de productos y la venta final al cliente.
+
+## 🎯 2. Objetivos del sistema
+
+- Gestionar proveedores, clientes, ingredientes y productos de forma eficiente.  
+- Administrar órdenes de compra y ventas con detalle completo.  
+- Mantener información consistente mediante interfaces de TypeScript.  
+- Implementar formularios funcionales con validación.  
+- Aplicar arquitectura modular bajo buenas prácticas (Clean Code).  
+- Utilizar hooks del ciclo de vida de Angular (ngOnInit y otros).  
+- Visualizar estadísticas mediante gráficos.  
+- Organizar un layout global con navegación clara.
+ 
+
+
+# 📦 Información Técnica del Proyecto
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
 
