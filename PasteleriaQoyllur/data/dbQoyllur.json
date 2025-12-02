@@ -1,14 +1,24 @@
 {
   "users": [
     {
-      "username": "admin",
+      "username": "criselo28",
       "password": "1234",
       "id": 1
     },
     {
-      "username": "cristian",
+      "username": "jurgensxd",
       "password": "1234",
       "id": 2
+    },
+    {
+      "username": "cesar",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "username": "dalia",
+      "password": "1234",
+      "id": 4
     }
   ],
   "products": [
@@ -220,16 +230,103 @@
   "orders": [
     {
       "customerId": 1,
-      "date": "2025-11-17",
-      "total": 255,
+      "date": "2025-12-03",
+      "total": 590,
       "items": [
         {
-          "productId": "1",
+          "productId": "16",
           "quantity": 3,
-          "price": 85
+          "price": 150
+        },
+        {
+          "productId": "5",
+          "quantity": 4,
+          "price": 35
         }
       ],
       "id": 1
+    },
+    {
+      "customerId": 2,
+      "date": "2026-01-09",
+      "total": 54,
+      "items": [
+        {
+          "productId": "15",
+          "quantity": 3,
+          "price": 10
+        },
+        {
+          "productId": "7",
+          "quantity": 3,
+          "price": 8
+        }
+      ],
+      "id": 2
+    },
+    {
+      "customerId": 3,
+      "date": "2026-01-13",
+      "total": 478.5,
+      "items": [
+        {
+          "productId": "16",
+          "quantity": 3,
+          "price": 150
+        },
+        {
+          "productId": "6",
+          "quantity": 3,
+          "price": 4
+        },
+        {
+          "productId": "8",
+          "quantity": 3,
+          "price": 5.5
+        }
+      ],
+      "id": 3
+    },
+    {
+      "customerId": 4,
+      "date": "2024-06-05",
+      "total": 645,
+      "items": [
+        {
+          "productId": "16",
+          "quantity": 3,
+          "price": 150
+        },
+        {
+          "productId": "2",
+          "quantity": 3,
+          "price": 65
+        }
+      ],
+      "id": 4
+    },
+    {
+      "customerId": 1,
+      "date": "2027-11-25",
+      "total": 492.5,
+      "items": [
+        {
+          "productId": "8",
+          "quantity": 3,
+          "price": 5.5
+        },
+        {
+          "productId": "16",
+          "quantity": 3,
+          "price": 150
+        },
+        {
+          "productId": "3",
+          "quantity": 4,
+          "price": 6.5
+        }
+      ],
+      "id": 5
     }
   ],
   "suppliers": [
@@ -1144,6 +1241,69 @@
       "recipeId": 15,
       "ingredientId": 11,
       "quantity": 2
+    }
+  ],
+  "inventory": [],
+  "inventoryMovements": [],
+  "employees": [
+    {
+      "fullName": "Jhon Cristian",
+      "roleId": "1",
+      "userId": 1,
+      "active": true,
+      "id": 1
+    },
+    {
+      "fullName": "Kalheb Jeremy",
+      "dni": "",
+      "email": "",
+      "phone": "",
+      "hireDate": "",
+      "roleId": "5",
+      "userId": 2,
+      "active": true,
+      "id": 2
+    },
+    {
+      "fullName": "Cesar Jair",
+      "roleId": "3",
+      "userId": 3,
+      "active": true,
+      "id": 3
+    },
+    {
+      "fullName": "dalia yasbet",
+      "roleId": "4",
+      "userId": 4,
+      "active": true,
+      "id": 4
+    }
+  ],
+  "roles": [
+    {
+      "name": "Admin",
+      "description": "Acceso total",
+      "id": 1
+    },
+    {
+      "name": "Comercial",
+      "description": "Gestión Comercial",
+      "id": 2
+    },
+    {
+      "name": "Compras",
+      "description": "Proveedores y compras",
+      "id": 3
+    },
+    {
+      "name": "Producción",
+      "description": "Producción y recetas",
+      "id": 4
+    },
+    {
+      "name": "Inventario",
+      "description": "Gestión de Inventario",
+      "id": 5
     }
   ]
 }

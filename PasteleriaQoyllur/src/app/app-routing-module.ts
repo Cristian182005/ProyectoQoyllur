@@ -77,6 +77,32 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/purchase-details/purchase-details-module').then(m => m.PurchaseDetailsModule)
   },
+  {
+    path: 'inventory',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/inventory/inventory-module').then(m => m.InventoryModule)
+  },
+  {
+    path: 'inventory-movements',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/inventory-movement/inventory-movement-module').then(m => m.InventoryMovementModule)
+  },
+  {
+    path: 'employees',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/employee/employee-module').then(m => m.EmployeeModule)
+  },
+  {
+    path: 'roles',
+    loadChildren: () =>
+      import('./modules/roles/roles-module').then(m => m.RolesModule)
+  },
+
+
+
 
   // Redirección por defecto
   { path: '', redirectTo: '/auth', pathMatch: 'full' },
@@ -89,4 +115,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -37,7 +37,7 @@ export class Login {
           alert('Bienvenido a QOYLLUR Pastelería 🍰');
           this.router.navigate(['/dashboard']);
         } else {
-          alert('Usuario no encontrado. Registre un nuevo administrador.');
+          alert('Usuario no encontrado. Registre un nuevo usuario.');
           this.router.navigate(['/auth/register']);
         }
       },

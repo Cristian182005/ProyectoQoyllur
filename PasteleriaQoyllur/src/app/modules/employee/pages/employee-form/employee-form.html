@@ -1,0 +1,46 @@
+<div class="container mt-4">
+
+  <h3 class="text-secondary mb-4">
+    {{ isEdit ? 'Editar Empleado ✏️' : 'Registrar Empleado 👨‍🍳' }}
+  </h3>
+
+  <form [formGroup]="employeeForm" (ngSubmit)="save()">
+
+    <label class="form-label">Nombre Completo</label>
+    <input type="text" class="form-control mb-3" formControlName="fullName">
+
+    <label class="form-label">DNI</label>
+    <input type="text" class="form-control mb-3" formControlName="dni">
+
+    <label class="form-label">Correo</label>
+    <input type="email" class="form-control mb-3" formControlName="email">
+
+    <label class="form-label">Teléfono</label>
+    <input type="text" class="form-control mb-3" formControlName="phone">
+
+    <label class="form-label">Fecha de Contratación</label>
+    <input type="date" class="form-control mb-3" formControlName="hireDate">
+
+    <label class="form-label">Rol</label>
+    <select class="form-control mb-3" formControlName="roleId">
+      <option value="" disabled>Seleccione rol</option>
+      <option *ngFor="let r of roles" [value]="r.id">{{ r.name }}</option>
+    </select>
+
+    <label class="form-label">Usuario del sistema</label>
+    <select class="form-control mb-3" formControlName="userId">
+      <option value="" disabled>Seleccione usuario</option>
+      <option *ngFor="let u of users" [value]="u.id">{{ u.username }}</option>
+    </select>
+
+    <label class="form-check mb-3">
+      <input type="checkbox" formControlName="active" class="form-check-input">
+      Activo
+    </label>
+
+    <button class="btn btn-primary">Guardar</button>
+    <a routerLink="/employees" class="btn btn-secondary ms-2">Cancelar</a>
+
+  </form>
+<br>
+</div>

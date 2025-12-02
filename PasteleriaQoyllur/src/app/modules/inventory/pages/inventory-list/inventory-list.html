@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h3 class="text-secondary mb-3">📦 Inventario de Ingredientes</h3>
+
+  <div class="text-end mb-3">
+    <a routerLink="/inventory/new" class="btn btn-warning">➕ Nuevo Registro</a>
+  </div>
+
+  <table class="table table-bordered shadow-sm">
+    <thead class="table-warning">
+      <tr>
+        <th>ID</th>
+        <th>Ingrediente</th>
+        <th>Cantidad</th>
+        <th>Última Actualización</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of inventory">
+        <td>{{ i.id }}</td>
+        <td>{{ getIngredientName(i.ingredientId) }}</td>
+        <td>{{ i.quantity }}</td>
+        <td>{{ i.lastUpdate }}</td>
+        <td class="text-center">
+          <a [routerLink]="['/inventory/edit', i.id]" class="btn btn-info btn-sm me-2">✏️</a>
+          <button class="btn btn-danger btn-sm" (click)="delete(i.id)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

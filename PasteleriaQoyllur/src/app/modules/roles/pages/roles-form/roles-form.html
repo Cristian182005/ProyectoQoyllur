@@ -1,0 +1,21 @@
+<div class="container mt-4">
+
+  <h3 class="text-secondary mb-4">
+    {{ isEdit ? 'Editar Rol ✏️' : 'Nuevo Rol 🔐' }}
+  </h3>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+
+    <label class="form-label">Nombre del Rol</label>
+    <input type="text" class="form-control mb-3" formControlName="name">
+
+    <label class="form-label">Descripción</label>
+    <textarea class="form-control mb-3" formControlName="description"
+      placeholder="Ej: Acceso total al sistema"></textarea>
+
+    <button class="btn btn-primary">Guardar</button>
+    <a routerLink="/roles" class="btn btn-secondary ms-2">Cancelar</a>
+
+  </form>
+<br>
+</div>
