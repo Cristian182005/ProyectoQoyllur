@@ -1,29 +1,34 @@
 {
   "users": [
     {
-      "username": "criselo28",
+      "username": "PQOY-AD",
       "password": "1234",
       "id": 1
     },
     {
-      "username": "jurgensxd",
+      "username": "PQOY-CO",
       "password": "1234",
       "id": 2
     },
     {
-      "username": "cesar",
-      "password": "1234",
+      "username": "PQOY-CO",
+      "password": "diego",
       "id": 3
     },
     {
-      "username": "dalia",
-      "password": "1234",
+      "username": "PQOY-COM",
+      "password": "dalia",
       "id": 4
     },
     {
-      "username": "angel",
-      "password": "1234",
+      "username": "PQOY-PRO",
+      "password": "cesar",
       "id": 5
+    },
+    {
+      "username": "PQOY-IN",
+      "password": "luis",
+      "id": 6
     }
   ],
   "products": [
@@ -1275,36 +1280,39 @@
       "id": 1
     },
     {
-      "fullName": "Kalheb Jeremy",
-      "dni": "",
-      "email": "",
-      "phone": "",
-      "hireDate": "",
+      "fullName": "Jeremy Jurgens",
       "roleId": "2",
       "userId": 2,
       "active": true,
       "id": 2
     },
     {
-      "fullName": "Cesar Jair",
-      "roleId": "3",
+      "fullName": "Diego Aquino",
+      "roleId": "2",
       "userId": 3,
       "active": true,
       "id": 3
     },
     {
-      "fullName": "dalia yasbet",
-      "roleId": "4",
+      "fullName": "Dalia Alberto",
+      "roleId": "3",
       "userId": 4,
       "active": true,
       "id": 4
     },
     {
-      "fullName": "Luis Angel",
-      "roleId": "5",
+      "fullName": "Cesar Carhuacusma",
+      "roleId": "4",
       "userId": 5,
       "active": true,
       "id": 5
+    },
+    {
+      "fullName": "Luis Daniel",
+      "roleId": "5",
+      "userId": 6,
+      "active": true,
+      "id": 6
     }
   ],
   "roles": [

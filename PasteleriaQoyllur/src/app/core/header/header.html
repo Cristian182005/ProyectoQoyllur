@@ -1,21 +1,59 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <!-- LOGO -->
+  <a class="navbar-brand d-flex align-items-center" routerLink="/dashboard">
+    <img src="assets/img/logoQoyllur.png" alt="Qoyllur" width="45" class="me-2" />
+    <span class="fw-bold">QOYLLUR Pastelería</span>
+  </a>
 
-    <!-- Logo que sigue yendo al dashboard (si quieres lo puedes dejar así o igual usar (click)) -->
-    <a class="navbar-brand d-flex align-items-center" routerLink="/dashboard">
-      <img src="assets/img/logoQoyllur.png" alt="Qoyllur" width="50" class="me-2">
-      QOYLLUR Pastelería
-    </a>
+  <!-- BOTÓN HAMBURGUESA -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#mainNavbar"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="d-flex align-items-center gap-2">
-      <!-- Botón Home por código -->
-      <button type="button" class="btn btn-outline-light btn-sm" (click)="goHome()">
-        🏠 Dashboard
+  <!-- CONTENIDO -->
+  <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+
+    <!-- Botón Dashboard (MODIFICADO) -->
+    <button
+      class="btn btn-dark d-flex align-items-center me-3 mt-2 mt-lg-0 px-3 py-2"
+      (click)="goHome()"
+      style="height: 42px;"
+    >
+      🏠 <span class="ms-2 fw-semibold">Dashboard</span>
+    </button>
+    <br>
+    <!-- USUARIO -->
+    <div class="dropdown" *ngIf="loggedIn">
+      <button
+        class="btn btn-dark d-flex align-items-center dropdown-toggle px-3 py-2"
+        type="button"
+        data-bs-toggle="dropdown"
+        style="height: 42px;"
+      >
+        <!-- FOTO -->
+        <img
+          src="assets/img/user.png"
+          class="rounded-circle"
+          width="30"
+          height="30"
+        />
+
+        <!-- NOMBRE -->
+        <span class="ms-2 fw-semibold">{{ userName }}</span>
       </button>
 
-      <button class="btn btn-light btn-sm" (click)="logout()">
-        <i class="bi bi-box-arrow-right"></i> Cerrar sesión
-      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+          <button class="dropdown-item text-danger" (click)="logout()">
+            Cerrar sesión
+          </button>
+        </li>
+      </ul>
     </div>
 
   </div>

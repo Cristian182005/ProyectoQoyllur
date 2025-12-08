@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing-module';
-import { SummaryCards } from './components/summary-cards/summary-cards';
 import { SalesChart } from './components/sales-chart/sales-chart';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -11,6 +10,7 @@ import { QuickPurchases } from './components/quick-purchases/quick-purchases';
 import { QuickProduction } from './components/quick-production/quick-production';
 import { QuickInventory } from './components/quick-inventory/quick-inventory';
 import { QuickAccess } from './components/quick-access/quick-access';
+import { SummaryCards } from './components/summary-cards/summary-cards';
 
 @NgModule({
   declarations: [

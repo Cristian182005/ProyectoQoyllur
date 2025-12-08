@@ -1,0 +1,20 @@
+/* Vista móvil: centrar y espaciar mejor */
+@media (max-width: 768px) {
+  .navbar-brand span {
+    font-size: 14px;
+  }
+
+  .dropdown-toggle img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown-toggle span {
+    font-size: 14px;
+  }
+}
+
+/* Imagen del usuario */
+.dropdown-toggle img {
+  object-fit: cover;
+}
