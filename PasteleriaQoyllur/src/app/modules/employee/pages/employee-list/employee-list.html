@@ -12,9 +12,6 @@
       <tr>
         <th>ID</th>
         <th>Nombre</th>
-        <th>DNI</th>
-        <th>Correo</th>
-        <th>Teléfono</th>
         <th>Usuario</th>
         <th>Rol</th>
         <th>Estado</th>
@@ -26,9 +23,6 @@
       <tr *ngFor="let e of employees">
         <td>{{ e.id }}</td>
         <td>{{ e.fullName }}</td>
-        <td>{{ e.dni }}</td>
-        <td>{{ e.email }}</td>
-        <td>{{ e.phone }}</td>
         <td>{{ getUserName(e.userId) }}</td>
         <td>{{ getRoleName(e.roleId) }}</td>
         <td>

@@ -19,6 +19,11 @@
       "username": "dalia",
       "password": "1234",
       "id": 4
+    },
+    {
+      "username": "angel",
+      "password": "1234",
+      "id": 5
     }
   ],
   "products": [
@@ -1243,8 +1248,24 @@
       "quantity": 2
     }
   ],
-  "inventory": [],
-  "inventoryMovements": [],
+  "inventory": [
+    {
+      "ingredientId": 1,
+      "quantity": 1,
+      "lastUpdate": "2025-12-09",
+      "id": 1
+    }
+  ],
+  "inventoryMovements": [
+    {
+      "ingredientId": 1,
+      "type": "IN",
+      "quantity": 0.02,
+      "date": "2026-01-09",
+      "reason": "xdd",
+      "id": 1
+    }
+  ],
   "employees": [
     {
       "fullName": "Jhon Cristian",
@@ -1259,7 +1280,7 @@
       "email": "",
       "phone": "",
       "hireDate": "",
-      "roleId": "5",
+      "roleId": "2",
       "userId": 2,
       "active": true,
       "id": 2
@@ -1277,6 +1298,13 @@
       "userId": 4,
       "active": true,
       "id": 4
+    },
+    {
+      "fullName": "Luis Angel",
+      "roleId": "5",
+      "userId": 5,
+      "active": true,
+      "id": 5
     }
   ],
   "roles": [

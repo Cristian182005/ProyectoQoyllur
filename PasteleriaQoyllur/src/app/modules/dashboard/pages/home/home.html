@@ -1,48 +1,151 @@
 <div class="container mt-5 text-center">
-  <h2>Bienvenido a <span class="text-warning">QOYLLUR</span> 🍰</h2>
-  <p class="text-muted mb-4">
-    Panel de control de la pastelería — vista general de la gestión.
-  </p>
+  <h2 class="mb-3 text-light text-center">
+    {{ welcomeMessage }}
+  </h2>
+  <p class="text-muted text-center">Panel de control — vista general según su rol.</p>
 
   <app-summary-cards></app-summary-cards>
   <app-sales-chart></app-sales-chart>
 
-  <div class="mt-5">
-    <h4 class="mb-3 text-secondary">Gestión rápida</h4>
+  <!-- ADMIN VE TODO -->
+  <div class="row text-center mt-1">
+    <div *ngIf="isAdmin">
+      <div class="row text-center mt-4 g-4 justify-content-center">
+        <!-- Gestión Comercial -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm p-3 h-100">
+            <img
+              src="assets/img/gestionComercial.png"
+              alt="Gestión Comercial"
+              class="img-fluid mb-3"
+            />
+            <app-quick-commercial></app-quick-commercial>
+          </div>
+        </div>
 
-    <!-- GESTIÓN COMERCIAL -->
-    <h5 class="text-primary mb-3" *ngIf="isAdmin || isComercial">🧾 Gestión Comercial</h5>
-    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4" *ngIf="isAdmin || isComercial">
-      <a routerLink="/products" class="btn btn-warning px-4 py-2 fw-semibold"> 🧁 Productos </a>
-      <a routerLink="/categories" class="btn btn-secondary px-4 py-2 fw-semibold"> 🍰 Categorías </a>
-      <a routerLink="/customers" class="btn btn-info px-4 py-2 fw-semibold text-white"> 👥 Clientes </a>
-      <a routerLink="/orders" class="btn btn-success px-4 py-2 fw-semibold"> 🧾 Pedidos </a>
+        <!-- Gestión Proveedores -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm p-3 h-100">
+            <img
+              src="assets/img/gestionProveedor.png"
+              alt="Gestión Proveedores"
+              class="img-fluid mb-3"
+            />
+            <app-quick-purchases></app-quick-purchases>
+          </div>
+        </div>
+
+        <!-- Gestión Producción -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm p-3 h-100">
+            <img
+              src="assets/img/gestionProduccionRecetas.png"
+              alt="Producción y Recetas"
+              class="img-fluid mb-3"
+            />
+            <app-quick-production></app-quick-production>
+          </div>
+        </div>
+
+        <!-- Gestión Inventario -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm p-3 h-100">
+            <img src="assets/img/gestionInventario.png" alt="Inventario" class="img-fluid mb-3" />
+            <app-quick-inventory></app-quick-inventory>
+          </div>
+        </div>
+
+        <!-- Gestión Accesos e Identidad -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm p-3 h-100">
+            <img
+              src="assets/img/gestionIdentidadAcceso.png"
+              alt="Accesos e Identidad"
+              class="img-fluid mb-3"
+            />
+            <app-quick-access></app-quick-access>
+          </div>
+        </div>
+      </div>
+      <br />
     </div>
 
-    <!-- GESTIÓN DE PROVEEDORES / COMPRAS -->
-    <h5 class="text-success mb-3" *ngIf="isAdmin || isCompras">🏭 Gestión de Proveedores</h5>
-    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4" *ngIf="isAdmin || isCompras">
-      <a routerLink="/suppliers" class="btn btn-outline-success px-4 py-2 fw-semibold"> 🚚 Proveedores </a>
-      <a routerLink="/purchase-orders" class="btn btn-outline-success px-4 py-2 fw-semibold"> 📦 Órdenes de Compra </a>
-      <a routerLink="/purchase-details" class="btn btn-outline-success px-4 py-2 fw-semibold"> 📋 Detalles de Compra </a>
+    <!-- COMERCIAL -->
+    <div class="row text-center mt-1">
+      <div *ngIf="isComercial">
+        <div class="row text-center mt-4 g-4 justify-content-center">
+          <!-- Gestión Comercial -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm p-3 h-100">
+              <img
+                src="assets/img/gestionComercial.png"
+                alt="Gestión Comercial"
+                class="img-fluid mb-3"
+              />
+              <app-quick-commercial></app-quick-commercial>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
     </div>
 
-    <!-- PRODUCCIÓN Y RECETAS -->
-    <h5 class="text-warning mb-3" *ngIf="isAdmin || isProduccion">👨‍🍳 Producción y Recetas</h5>
-    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4" *ngIf="isAdmin || isProduccion">
-      <a routerLink="/ingredients" class="btn btn-warning px-4 py-2 fw-semibold"> 🧂 Ingredientes </a>
-      <a routerLink="/units" class="btn btn-outline-warning px-4 py-2 fw-semibold text-light"> ⚖ Unidades </a>
-      <a routerLink="/recipes" class="btn btn-outline-warning px-4 py-2 fw-semibold text-light"> 📘 Recetas </a>
+    <!-- COMPRAS -->
+    <div class="row text-center mt-1">
+      <div *ngIf="isCompras">
+        <div class="row text-center mt-4 g-4 justify-content-center">
+          <!-- Gestión Proveedores -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm p-3 h-100">
+              <img
+                src="assets/img/gestionProveedor.png"
+                alt="Gestión Proveedores"
+                class="img-fluid mb-3"
+              />
+              <app-quick-purchases></app-quick-purchases>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
     </div>
 
-    <!-- INVENTARIO (cuando lo tengas implementado) -->
-    <h5 class="text-info mb-3" *ngIf="isAdmin || isInventario">📦 Inventario</h5>
-    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4" *ngIf="isAdmin || isInventario">
-      <a routerLink="/inventory" class="btn btn-outline-info px-4 py-2 fw-semibold"> 📊 Inventario </a>
-      <a routerLink="/inventory-movements" class="btn btn-outline-info px-4 py-2 fw-semibold"> 🔄 Movimientos </a>
+    <!-- PRODUCCIÓN -->
+    <div class="row text-center mt-1">
+      <div *ngIf="isProduccion">
+        <div class="row text-center mt-4 g-4 justify-content-center">
+          <!-- Gestión Producción -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm p-3 h-100">
+              <img
+                src="assets/img/gestionProduccionRecetas.png"
+                alt="Producción y Recetas"
+                class="img-fluid mb-3"
+              />
+              <h5 class="text-warning">Producción y Recetas</h5>
+              <app-quick-production></app-quick-production>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
     </div>
 
+    <!-- INVENTARIO -->
+    <div class="row text-center mt-1">
+      <div *ngIf="isInventario">
+        <div class="row text-center mt-4 g-4 justify-content-center">
+          <!-- Gestión Inventario -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm p-3 h-100">
+              <img src="assets/img/gestionInventario.png" alt="Inventario" class="img-fluid mb-3" />
+              <h5 class="text-info">Gestión de Inventario</h5>
+              <app-quick-inventory></app-quick-inventory>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
   </div>
-
-  <br /><br />
 </div>

@@ -34,10 +34,6 @@ export class EmployeeForm implements OnInit {
 
     this.employeeForm = new FormGroup({
       fullName: new FormControl('', Validators.required),
-      dni: new FormControl('', [Validators.required, Validators.minLength(8)]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', Validators.required),
-      hireDate: new FormControl('', Validators.required),
       roleId: new FormControl('', Validators.required),
       userId: new FormControl('', Validators.required),
       active: new FormControl(true)

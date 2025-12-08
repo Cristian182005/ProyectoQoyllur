@@ -1,29 +1,130 @@
-<div class="row text-center mt-4">
-  <div class="col-md-3 mb-3">
-    <div class="card shadow-sm p-3">
-      <h5>Productos</h5>
-      <h2 class="text-warning">{{ totalProducts }}</h2>
-    </div>
-  </div>
+<div class="row text-center mt-4 g-4">
 
-  <div class="col-md-3 mb-3">
-    <div class="card shadow-sm p-3">
-      <h5>Categorías</h5>
-      <h2 class="text-primary">{{ totalCategories }}</h2>
+  <!-- COMERCIAL -->
+  <ng-container *ngIf="isAdmin || isComercial">
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Productos</h5>
+        <h2 class="text-warning">{{ totalProducts }}</h2>
+      </div>
     </div>
-  </div>
 
-  <div class="col-md-3 mb-3">
-    <div class="card shadow-sm p-3">
-      <h5>Clientes</h5>
-      <h2 class="text-success">{{ totalCustomers }}</h2>
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Categorías</h5>
+        <h2 class="text-primary">{{ totalCategories }}</h2>
+      </div>
     </div>
-  </div>
 
-  <div class="col-md-3 mb-3">
-    <div class="card shadow-sm p-3">
-      <h5>Pedidos</h5>
-      <h2 class="text-info">{{ totalOrders }}</h2>
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Clientes</h5>
+        <h2 class="text-success">{{ totalCustomers }}</h2>
+      </div>
     </div>
-  </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Pedidos</h5>
+        <h2 class="text-info">{{ totalOrders }}</h2>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- COMPRAS -->
+  <ng-container *ngIf="isAdmin || isCompras">
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Proveedores</h5>
+        <h2 class="text-warning">{{ totalSuppliers }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Órdenes de compra</h5>
+        <h2 class="text-primary">{{ totalPurchaseOrders }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Detalles de compra</h5>
+        <h2 class="text-success">{{ totalPurchaseDetails }}</h2>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- PRODUCCIÓN -->
+  <ng-container *ngIf="isAdmin || isProduccion">
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Ingredientes</h5>
+        <h2 class="text-warning">{{ totalIngredients }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Unidades</h5>
+        <h2 class="text-primary">{{ totalUnits }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Recetas</h5>
+        <h2 class="text-success">{{ totalRecipes }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Detalles receta</h5>
+        <h2 class="text-info">{{ totalRecipeDetails }}</h2>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- INVENTARIO -->
+  <ng-container *ngIf="isAdmin || isInventario">
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Inventario</h5>
+        <h2 class="text-warning">{{ totalInventory }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Movimientos</h5>
+        <h2 class="text-primary">{{ totalMovements }}</h2>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- ACCESO -->
+  <ng-container *ngIf="isAdmin">
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Empleados</h5>
+        <h2 class="text-warning">{{ totalEmployees }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Usuarios</h5>
+        <h2 class="text-primary">{{ totalUsers }}</h2>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm">
+        <h5>Roles</h5>
+        <h2 class="text-success">{{ totalRoles }}</h2>
+      </div>
+    </div>
+  </ng-container>
+
 </div>

@@ -4,7 +4,6 @@ import { Footer } from './footer/footer';
 import { Header } from './header/header';
 
 
-
 @NgModule({
   declarations: [
     Footer,

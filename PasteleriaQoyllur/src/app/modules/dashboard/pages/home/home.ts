@@ -3,36 +3,53 @@ import { AuthService } from '../../../auth/services/auth-service';
 
 @Component({
   selector: 'app-home',
-  standalone: false,
   templateUrl: './home.html',
-  styles: ``,
+  standalone: false
 })
-export class Home implements OnInit {
+export class DashboardHome implements OnInit {
+
   roleId: number | null = null;
+  roleName: string = '';
+  welcomeMessage: string = '';
 
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.roleId = Number(this.authService.getRoleId());
+    const session = this.authService.getSession();
+
+    this.roleId = Number(session?.roleId);
+    this.roleName = session?.employee?.roleName || '';
+
+    this.setWelcomeMessage();
   }
 
-  get isAdmin(): boolean {
-    return this.roleId === 1;
+  setWelcomeMessage() {
+    switch (this.roleId) {
+      case 1:
+        this.welcomeMessage = 'Bienvenido Administrador General 👑';
+        break;
+      case 2:
+        this.welcomeMessage = 'Bienvenido al Módulo Comercial 🛒';
+        break;
+      case 3:
+        this.welcomeMessage = 'Bienvenido al Módulo de Compras 📦';
+        break;
+      case 4:
+        this.welcomeMessage = 'Bienvenido al Módulo de Producción 👨‍🍳';
+        break;
+      case 5:
+        this.welcomeMessage = 'Bienvenido al Módulo de Inventario 📊';
+        break;
+      default:
+        this.welcomeMessage = 'Bienvenido a QOYLLUR Pastelería ✨';
+        break;
+    }
   }
 
-  get isComercial(): boolean {
-    return this.roleId === 2;
-  }
-
-  get isCompras(): boolean {
-    return this.roleId === 3;
-  }
-
-  get isProduccion(): boolean {
-    return this.roleId === 4;
-  }
-
-  get isInventario(): boolean {
-    return this.roleId === 5;
-  }
+  // Helpers para el HTML
+  get isAdmin() { return this.roleId === 1; }
+  get isComercial() { return this.roleId === 2; }
+  get isCompras() { return this.roleId === 3; }
+  get isProduccion() { return this.roleId === 4; }
+  get isInventario() { return this.roleId === 5; }
 }

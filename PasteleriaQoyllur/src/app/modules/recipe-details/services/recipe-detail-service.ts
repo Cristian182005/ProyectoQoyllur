@@ -5,7 +5,6 @@ import { RecipeDetails } from '../../../shared/models/recipeDetails';
 
 @Injectable({ providedIn: 'root' })
 export class RecipeDetailService {
-
   private apiUrl = 'http://localhost:3002/recipeDetails';
 
   constructor(private http: HttpClient) {}
@@ -20,5 +19,9 @@ export class RecipeDetailService {
 
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  getAll() {
+    return this.http.get<RecipeDetails[]>(this.apiUrl);
   }
 }
