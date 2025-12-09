@@ -1,38 +1,143 @@
-# 🍰 Pastelería Qoyllur – Sistema de Gestión (Angular)
+# 🍰 QOYLLUR PASTELERÍA — Sistema de Gestión Integral  
+### Proyecto Final — Aplicaciones Web  
+### Universidad Tecnológica del Perú (UTP)
 
-Proyecto académico desarrollado con Angular CLI · Arquitectura Modular · CRUD completo · JSON API
+---
 
-## 📌 1. Definición del Proyecto
+## 📌 Descripción del Sistema
 
-**Pastelería Qoyllur** es un sistema web de gestión integral para una pastelería, cuyo objetivo es administrar eficientemente:
+**QOYLLUR Pastelería** es un sistema web completo diseñado para gestionar todas las áreas operativas de una pastelería real:
 
-- Proveedores  
-- Ingredientes  
-- Unidades de medida  
-- Productos  
-- Categorías  
-- Recetas  
-- Detalles de recetas  
-- Compras (órdenes y detalles)  
-- Ventas (órdenes y detalles)  
+- **Gestión Comercial** (Productos, Categorías, Clientes, Pedidos)  
+- **Gestión de Proveedores y Compras** (Suppliers, Purchase Orders, Purchase Details)  
+- **Gestión de Producción** (Recipes, Recipe Details, Ingredients, Units)  
+- **Gestión de Inventario** (Inventario y Movimientos)  
+- **Gestión de Accesos e Identidad** (Login, Empleados, Roles)
+
+El sistema incluye autenticación, control de roles, dashboard con métricas, tablas responsivas, formularios modernos y un backend simulado mediante **JSON Server**.
+
+---
+
+# 🛠️ Características del Sistema
+
+### 🔐 Autenticación y roles
+- Login conectado al JSON Server  
+- Sesión persistente en LocalStorage  
+- **AuthGuard** → Valida si el usuario está autenticado  
+- **RoleGuard** → Restringe acceso según rol  
+- Cada usuario ve solo los módulos permitidos
+
+### 🧁 Gestión Comercial
+- Productos y categorías  
 - Clientes  
-- Usuarios  
-- Visualización de ventas mediante gráficos  
-- Navegación general (menú, header, footer)
+- Pedidos con cálculo automático  
+- Dashboard con resumen  
+- Gráfico de ventas mensual (ngx-charts)
 
-Este sistema permite controlar desde la adquisición de insumos hasta la creación de productos y la venta final al cliente.
+### 🧾 Gestión de Proveedores y Compras
+- CRUD de proveedores  
+- Órdenes de compra  
+- Detalle de compras  
 
-## 🎯 2. Objetivos del sistema
+### 👨‍🍳 Producción
+- Recetas  
+- Ingredientes  
+- Unidades  
+- Detalle de recetas dinámico  
 
-- Gestionar proveedores, clientes, ingredientes y productos de forma eficiente.  
-- Administrar órdenes de compra y ventas con detalle completo.  
-- Mantener información consistente mediante interfaces de TypeScript.  
-- Implementar formularios funcionales con validación.  
-- Aplicar arquitectura modular bajo buenas prácticas (Clean Code).  
-- Utilizar hooks del ciclo de vida de Angular (ngOnInit y otros).  
-- Visualizar estadísticas mediante gráficos.  
-- Organizar un layout global con navegación clara.
- 
+### 📦 Inventario
+- Control de stock  
+- Movimientos IN/OUT  
+- Kardex básico  
+
+### 📱 Interfaz moderna y responsiva
+- Todas las tablas adaptadas para celulares  
+- Formularios 100% responsivos  
+- Dashboard y cards dinámicos  
+- Imágenes personalizadas por tipo de gestión  
+
+---
+
+# 🧱 Tecnologías Utilizadas
+
+| Tecnología | Uso |
+|-----------|-----|
+| **Angular 17** | Frontend principal |
+| **TypeScript** | Lógica del sistema |
+| **Bootstrap 5** | UI y responsividad |
+| **JSON Server** | Base de datos simulada |
+| **RxJS** | Manejo de peticiones |
+| **ngx-charts** | Gráfico del dashboard |
+| **LocalStorage** | Sesión persistente |
+
+---
+
+# 📁 Estructura del Proyecto
+
+/src
+├── app
+│ ├── core
+│ │ ├── guards
+│ │ └── services
+│ ├── modules
+│ │ ├── auth
+│ │ ├── dashboard
+│ │ ├── products
+│ │ ├── categories
+│ │ ├── customers
+│ │ ├── orders
+│ │ ├── suppliers
+│ │ ├── purchases
+│ │ ├── ingredients
+│ │ ├── units
+│ │ ├── recipes
+│ │ ├── inventory
+│ │ ├── employees
+│ │ └── roles
+│ ├── shared
+│ ├── app-routing.module.ts
+│ └── app.module.ts
+├── assets
+│ └── img
+└── environments
+
+---
+
+# ⚙️ Requisitos Previos
+
+Antes de instalar:
+
+### ✔ Node.js  
+https://nodejs.org/
+
+### ✔ Angular CLI  
+npm install -g @angular/cli
+
+### ✔ JSON server
+npm install -g json-server
+
+
+
+# 📦 MANUAL DE INSTALACIÓN
+
+### ✔ Clonar el repositorio
+git clone https://github.com/tu-repo/QoyllurPasteleria.git
+cd QoyllurPasteleria
+
+### ✔ Instalar dependencias
+npm install
+
+### ✔ Iniciar JSON Server
+json-server --watch dbQoyllur.json --port 3002
+
+
+
+# 🚀 MANUAL DE EJECUCION
+
+### Ejecutar Angular
+ng serve -o
+
+
 
 
 # 📦 Información Técnica del Proyecto
