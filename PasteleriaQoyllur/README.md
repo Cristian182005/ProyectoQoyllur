@@ -125,17 +125,17 @@ git clone https://github.com/tu-repo/QoyllurPasteleria.git
 cd QoyllurPasteleria
 
 ### ✔ Instalar dependencias
-npm install
+Comando: npm install
 
 ### ✔ Iniciar JSON Server
+Comando: npm run backend
 json-server --watch dbQoyllur.json --port 3002
-
 
 
 # 🚀 MANUAL DE EJECUCION
 
 ### Ejecutar Angular
-ng serve -o
+Comando: ng serve -o
 
 
 
