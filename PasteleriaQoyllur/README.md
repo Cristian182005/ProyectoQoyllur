@@ -129,8 +129,6 @@ Comando: npm install
 
 ### ✔ Iniciar JSON Server
 Comando: npm run backend
-json-server --watch dbQoyllur.json --port 3002
-
 
 # 🚀 MANUAL DE EJECUCION
 
